@@ -9,11 +9,13 @@ a {
 }
 
 /* index.html */
-body.info-page {
+body.info-page,
+body.game-page {
     background-color: blueviolet;
 }
 
-main.info-page {
+main.info-page,
+main.game-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,11 +23,13 @@ main.info-page {
     width: 100vw;
 }
 
-.container.info-page {
+.container.info-page,
+.container.game-page {
     width: 70%;
 }
 
-h1.info-page {
+h1.info-page,
+h1.game-page {
     text-align: center;
     padding-bottom: .5rem;
     color: white;
@@ -36,7 +40,8 @@ h2.info-page {
     padding-bottom: .5rem;
 }
 
-.info-container {
+.info-container,
+.game-container {
     background-color: white;
     color: black;
     border-radius: 5px;
@@ -105,4 +110,35 @@ h2.info-page {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
+}
+
+
+/* game */
+.hide {
+    display: none;
+}
+
+.game-container {
+    height: 50vh;
+    /* Attrbutes that need to be added with JS when showing "Start" Button
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+}
+
+.top-container,
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.anagram-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
 }
