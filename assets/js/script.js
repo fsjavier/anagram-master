@@ -1,3 +1,17 @@
+// Script to open and close "how to play" modal
+const howToPlayModal = document.getElementsByClassName("how-to-play-modal")[0];
+const openHowToPlayModal = document.getElementsByClassName("open-how-to-play")[0];
+const closeHowToPlayModal = document.getElementsByClassName("close-how-to-play")[0];
+
+openHowToPlayModal.addEventListener("click", function () {
+    howToPlayModal.showModal();
+});
+
+closeHowToPlayModal.addEventListener("click", function () {
+    howToPlayModal.close();
+});
+
+
 // Game Logic
 
 const startGame = document.getElementById("start-button");
@@ -7,15 +21,13 @@ let anagram = document.getElementById("anagram");
 
 
 startGame.addEventListener("click", function () {
-    document.getElementById("start").classList.add("hide");
-    document.getElementsByClassName("game-container")[0].classList.remove("flex");
-    document.getElementsByClassName("top-container")[0].classList.remove("hide");
+    document.getElementsByClassName("info-container")[0].classList.add("hide");
+    document.getElementsByClassName("game-container")[0].classList.remove("hide");
     document.getElementsByClassName("top-container")[0].classList.add("flex");
-    document.getElementsByClassName("anagram-container")[0].classList.remove("hide");
     document.getElementsByClassName("anagram-container")[0].classList.add("flex");
-    document.getElementsByClassName("bottom-container")[0].classList.remove("hide");
     document.getElementsByClassName("bottom-container")[0].classList.add("flex");
 });
+
 
 
 

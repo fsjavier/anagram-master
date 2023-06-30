@@ -12,10 +12,11 @@
     <title>Anagram Master</title>
 </head>
 
-<body class="info-page">
-    <main class="info-page">
-        <div class="container info-page">
-            <h1 class="info-page">Anagram Master</h1>
+<body>
+    <main class="outer-container">
+        <div class="container">
+            <h1>Anagram Master</h1>
+            <!-- Info screen starts-->
             <div class="info-container">
                 <div class="game-info">
                     <h2 class="info-page">Will you be the next Anagram Master?</h2>
@@ -41,30 +42,74 @@
                 <div class="difficulty">
                     <h3>Select Difficulty</h3>
                     <div class="diff-buttons">
-                        <button class="btn">Normal</button>
-                        <button class="btn">Hard</button>
+                        <button class="btn diff-button" id="normal">Normal</button>
+                        <button class="btn diff-button" id="hard">Hard</button>
                     </div>
                 </div>
                 <div class="theme">
                     <h3>Select Theme</h3>
                     <div class="theme-buttons">
-                        <button class="btn">Animals</button>
-                        <button class="btn">Movies</button>
-                        <button class="btn">Music Bands</button>
-                        <button class="btn">Countries</button>
+                        <button class="btn theme-button">Animals</button>
+                        <button class="btn theme-button">Movies</button>
+                        <button class="btn theme-button">Music Bands</button>
+                        <button class="btn theme-button">Countries</button>
                     </div>
                 </div>
-                <div class="start-container">
-                    <button class="btn"><a href="game.html">Let's Play!</a></button>
+                <div id="start">
+                    <button class="btn" id="start-button">
+                        <h2>Start</h2>
+                    </button>
                 </div>
             </div>
+            <!-- Info screen ends -->
+
+            <!-- Game screen starts -->
+            <div class="game-container hide">
+
+                <div class="top-container">
+                    <div class="time">
+                        <h3>Time: 60 seconds</h3>
+                    </div>
+                    <div class="restart">
+                        <button class="btn"><a href="index.html">
+                                <h3>Restart</h3>
+                            </a></button>
+                    </div>
+                </div>
+
+                <div class="anagram-container">
+                    <div>
+                        <h3 id="anagram">lion</h3>
+                    </div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <button class="btn">Hint</button>
+                        <button class="btn">Check Answer</button>
+                    </div>
+
+                </div>
+
+                <div class="bottom-container">
+                    <h3>Round 1 of 8</h3>
+                    <h3>Score: 0</h3>
+                </div>
+            </div>
+            <!-- Game screen ends-->
+
+
+
+        </div>
+
+
+
         </div>
     </main>
     <footer>
 
     </footer>
 
-    <script src="assets/js/index.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
