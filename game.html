@@ -17,13 +17,13 @@
     <main class="game-page">
         <div class="container game-page">
             <h1 class="game-page">Anagram Master</h1>
-            <div class="game-container">
-                <div class="hide" id="start">
-                    <button class="btn">
+            <div class="game-container flex">
+                <div id="start">
+                    <button class="btn" id="start-button">
                         <h2>Start</h2>
                     </button>
                 </div>
-                <div class="top-container">
+                <div class="top-container hide">
                     <div class="time">
                         <h3>Time: 60 seconds</h3>
                     </div>
@@ -34,9 +34,9 @@
                     </div>
                 </div>
 
-                <div class="anagram-container">
+                <div class="anagram-container hide">
                     <div>
-                        <h3>lion</h3>
+                        <h3 id="anagram">lion</h3>
                     </div>
                     <div>
                         <input type="text">
@@ -48,7 +48,7 @@
 
                 </div>
 
-                <div class="bottom-container">
+                <div class="bottom-container hide">
                     <h3>Round 1 of 8</h3>
                     <h3>Score: 0</h3>
                 </div>

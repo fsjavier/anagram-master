@@ -25,7 +25,7 @@ main.game-page {
 
 .container.info-page,
 .container.game-page {
-    width: 70%;
+    width: 50%;
 }
 
 h1.info-page,
@@ -118,25 +118,26 @@ h2.info-page {
     display: none;
 }
 
+.flex {
+    display: flex;
+}
+
 .game-container {
     height: 50vh;
-    /* Attrbutes that need to be added with JS when showing "Start" Button
-    display: flex;
     justify-content: center;
     align-items: center;
-    */
 }
 
 .top-container,
 .bottom-container {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     height: 20%;
 }
 
 .anagram-container {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
