@@ -11,14 +11,38 @@ closeHowToPlayModal.addEventListener("click", function () {
     howToPlayModal.close();
 });
 
+// Choose difficulty and theme
+let difficulty;
+let theme;
+
+let difficultyButtons = document.getElementsByClassName("diff-button");
+for (let button of difficultyButtons) {
+    button.addEventListener("click", function () {
+        document.getElementsByClassName("selected-btn-diff")[0]?.classList.remove("selected-btn-diff");
+        button.classList.add("selected-btn-diff");
+        difficulty = button.innerHTML.toLowerCase();
+        console.log(difficulty);
+    });
+}
+
+let themeButtons = document.getElementsByClassName("theme-button");
+for (let button of themeButtons) {
+    button.addEventListener("click", function () {
+        document.getElementsByClassName("selected-btn-theme")[0]?.classList.remove("selected-btn-theme");
+        button.classList.add("selected-btn-theme");
+        theme = button.innerHTML.toLowerCase();
+        console.log(theme);
+    });
+}
+
+
+
 
 // Game Logic
 
 const startGame = document.getElementById("start-button");
 const gameContainer = document.getElementsByClassName("game-container")[0];
 let anagram = document.getElementById("anagram");
-
-
 
 startGame.addEventListener("click", function () {
     document.getElementsByClassName("info-container")[0].classList.add("hide");
@@ -27,6 +51,8 @@ startGame.addEventListener("click", function () {
     document.getElementsByClassName("anagram-container")[0].classList.add("flex");
     document.getElementsByClassName("bottom-container")[0].classList.add("flex");
 });
+
+
 
 
 

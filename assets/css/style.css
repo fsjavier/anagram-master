@@ -78,6 +78,14 @@ h2.info-page {
     text-align: center;
 }
 
+.selected-btn-diff {
+    border: 5px solid black;
+}
+
+.selected-btn-theme {
+    border: 5px solid black;
+}
+
 .theme {
     display: flex;
     justify-content: center;
@@ -102,7 +110,7 @@ h2.info-page {
     margin: .5rem;
 }
 
-.start-container {
+#start {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
@@ -126,14 +134,14 @@ h2.info-page {
 
 .top-container,
 .bottom-container {
-    /* display: flex; */
+    /* when loaded display should be set to flex */
     justify-content: space-between;
     align-items: center;
     height: 20%;
 }
 
 .anagram-container {
-    /* display: flex; */
+    /* when loaded display should be set to flex */
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
