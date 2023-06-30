@@ -12,35 +12,48 @@
     <title>Anagram Master</title>
 </head>
 
-<body>
-    <main>
-        <div class="outer-container">
-            <h1>Anagram Master</h1>
+<body class="info-page">
+    <main class="info-page">
+        <div class="container info-page">
+            <h1 class="info-page">Anagram Master</h1>
             <div class="info-container">
                 <div class="game-info">
-                    <h2>Will you be the next Anagram Master?</h2>
-                    <h3>How to play</h3>
-                    <p>Each game consists of 8 rounds. In each of them you are presented with an anagram related to the
-                        theme you have selected and have to find the right word.</p>
-                    <p>The time you have to find the word in each round depend on the difficulty level you select. In
-                        the Normal level there are 60 seconds and in the hard only 30.</p>
-                    <p>Every correct answer gives you 3 points.</p>
-                    <p>You can also ask for a hint for each word. If you use this option you will only get 1 point if
-                        you can then find the solution.</p>
+                    <h2 class="info-page">Will you be the next Anagram Master?</h2>
+                    <div class="how-to-play">
+                        <button class="btn">
+                            <h3>How to play</h3>
+                        </button>
+                        <dialog class="how-to-play-modal">
+                            <p>Each game consists of 8 rounds. In each of them you are presented with an anagram related
+                                to
+                                the theme you have selected and have to find the right word.</p>
+                            <p>The time you have to find the word in each round depend on the difficulty level you
+                                select.
+                                In the Normal level there are 60 seconds and in the hard only 30.</p>
+                            <p>Every correct answer gives you 3 points.</p>
+                            <p>You can also ask for a hint for each word. If you use this option you will only get 1
+                                point
+                                if you can then find the solution.</p>
+                        </dialog>
+                    </div>
                 </div>
                 <div class="difficulty">
                     <h3>Select Difficulty</h3>
-                    <button class="btn">Normal</button>
-                    <button class="btn">Hard</button>
+                    <div class="diff-buttons">
+                        <button class="btn">Normal</button>
+                        <button class="btn">Hard</button>
+                    </div>
                 </div>
                 <div class="theme">
                     <h3>Select Theme</h3>
-                    <button class="btn">Animals</button>
-                    <button class="btn">Movies</button>
-                    <button class="btn">Music Bands</button>
-                    <button class="btn">Countries</button>
+                    <div class="theme-buttons">
+                        <button class="btn">Animals</button>
+                        <button class="btn">Movies</button>
+                        <button class="btn">Music Bands</button>
+                        <button class="btn">Countries</button>
+                    </div>
                 </div>
-                <div>
+                <div class="start-container">
                     <button class="btn">Let's Play!</button>
                 </div>
             </div>
