@@ -71,11 +71,10 @@ const numberOfRounds = 8;
 const timeHardDifficulty = 30;
 const timeNormalDifficulty = 60;
 let counter;
-let interval;
 const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
 let questionElement = document.getElementById("anagram");
-let userAnswer;
+let userAnswer = document.getElementById("answer");
 let questionsCurrentIndex = 0;
 let roundElement = document.getElementById("round");
 let currentRound = 1;
@@ -143,6 +142,7 @@ function checkAnswer() {
         userScore += 3;
         scoreElement.innerText = userScore;
     } else {
+        console.log(userAnswer);
         alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
     }
     document.getElementById("answer").value = "";
@@ -163,9 +163,15 @@ function assesGameState() {
     }
 }
 
-
-
+/* Checks the answer from the user either clicking on Check Answer
+   or pressing Enter as long as the field is not empty.
+*/
 checkAnswerBtn.addEventListener("click", checkAnswer);
+userAnswer.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && userAnswer.value !== "") {
+        checkAnswer();
+    }
+});
 
 
 
@@ -173,6 +179,7 @@ checkAnswerBtn.addEventListener("click", checkAnswer);
 
 
 
+// Questions object
 const anagrams = {
     animals: [
         {
