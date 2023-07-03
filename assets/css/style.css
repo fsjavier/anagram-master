@@ -61,6 +61,7 @@ h2.info-page {
     }
 }
 
+
 .difficulty {
     display: flex;
     justify-content: center;
@@ -146,4 +147,13 @@ h2.info-page {
     justify-content: space-evenly;
     align-items: center;
     height: 60%;
+}
+
+/* Change game background to show that the answer was correct / incorrect */
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
 }

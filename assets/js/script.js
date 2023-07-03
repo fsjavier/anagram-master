@@ -68,8 +68,8 @@ function startGame() {
 
 // Selecting questions
 const numberOfRounds = 8;
-const timeHardDifficulty = 30;
-const timeNormalDifficulty = 60;
+const timeHardDifficulty = 20;
+const timeNormalDifficulty = 45;
 let counter;
 let interval;
 const checkAnswerBtn = document.getElementById("check-answer");
@@ -125,6 +125,8 @@ function startTimer(difficulty) {
  * Assign the inner text of the html anagram element to the selected question.
  */
 function setNextQuestion() {
+    gameContainer.classList.remove("correct");
+    gameContainer.classList.remove("incorrect");
     clearInterval(interval);
     askedForHint = false;
     roundElement.innerText = currentRound;
@@ -170,12 +172,14 @@ closeHintModal.addEventListener("click", function () {
 function checkAnswer() {
     userAnswer = document.getElementById("answer").value.toLowerCase();
     if (userAnswer === questionsArray[questionsCurrentIndex].name) {
-        alert("Correct!");
+        // alert("Correct!");
+        gameContainer.classList.add("correct");
         userScore += 3;
         scoreElement.innerText = userScore;
     } else {
-        console.log(userAnswer);
-        alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
+        gameContainer.classList.add("incorrect");
+
+        // alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
     }
     document.getElementById("answer").value = "";
     assesGameState();
