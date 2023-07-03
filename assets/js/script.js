@@ -15,25 +15,27 @@ closeHowToPlayModal.addEventListener("click", function () {
 let difficulty;
 let theme;
 
+
 let difficultyButtons = document.getElementsByClassName("diff-button");
 for (let button of difficultyButtons) {
     button.addEventListener("click", function () {
         document.getElementsByClassName("selected-btn-diff")[0]?.classList.remove("selected-btn-diff");
-        button.classList.add("selected-btn-diff");
-        difficulty = button.innerHTML.toLowerCase();
-        console.log(difficulty);
+        this.classList.add("selected-btn-diff");
+        difficulty = this.getAttribute("data-difficulty");
     });
 }
+
 
 let themeButtons = document.getElementsByClassName("theme-button");
 for (let button of themeButtons) {
     button.addEventListener("click", function () {
         document.getElementsByClassName("selected-btn-theme")[0]?.classList.remove("selected-btn-theme");
-        button.classList.add("selected-btn-theme");
-        theme = button.innerHTML.toLowerCase();
-        console.log(theme);
+        this.classList.add("selected-btn-theme");
+        theme = this.getAttribute("data-theme");
     });
 }
+
+
 
 
 
@@ -45,12 +47,21 @@ const gameContainer = document.getElementsByClassName("game-container")[0];
 let anagram = document.getElementById("anagram");
 
 startGame.addEventListener("click", function () {
+    // Prevent the game from starting if a difficulty level and theme have not been selected
+    if (!difficulty || !theme) {
+        alert("To start the game select a Difficulty Level and Theme");
+        return;
+    }
+
+    // Hide info and display questions applying style
     document.getElementsByClassName("info-container")[0].classList.add("hide");
     document.getElementsByClassName("game-container")[0].classList.remove("hide");
     document.getElementsByClassName("top-container")[0].classList.add("flex");
     document.getElementsByClassName("anagram-container")[0].classList.add("flex");
     document.getElementsByClassName("bottom-container")[0].classList.add("flex");
 });
+
+
 
 
 
