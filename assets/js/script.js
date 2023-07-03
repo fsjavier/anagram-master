@@ -1,5 +1,5 @@
 // Script to open and close "how to play" modal
-const howToPlayModal = document.getElementsByClassName("how-to-play-modal")[0];
+const howToPlayModal = document.getElementById("how-to-play-modal");
 const openHowToPlayModal = document.getElementsByClassName("open-how-to-play")[0];
 const closeHowToPlayModal = document.getElementsByClassName("close-how-to-play")[0];
 
@@ -71,6 +71,7 @@ const numberOfRounds = 8;
 const timeHardDifficulty = 30;
 const timeNormalDifficulty = 60;
 let counter;
+let interval;
 const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
 let questionElement = document.getElementById("anagram");
@@ -78,6 +79,7 @@ let userAnswer = document.getElementById("answer");
 let questionsCurrentIndex = 0;
 let roundElement = document.getElementById("round");
 let currentRound = 1;
+let askedForHint = false;
 let scoreElement = document.getElementById("score");
 let userScore = 0;
 
@@ -107,7 +109,7 @@ function startTimer(difficulty) {
         throw (`Difficulty ${difficulty} was not defined!`);
     }
 
-    const interval = setInterval(function () {
+    interval = setInterval(function () {
         document.getElementById("time-left").innerText = counter === 1 ? `${counter} second` : `${counter} seconds`;
         counter--;
 
@@ -123,12 +125,42 @@ function startTimer(difficulty) {
  * Assign the inner text of the html anagram element to the selected question.
  */
 function setNextQuestion() {
+    clearInterval(interval);
+    askedForHint = false;
     roundElement.innerText = currentRound;
     scoreElement.innerText = userScore;
     questionElement.innerText = questionsArray[questionsCurrentIndex].anagram;
     startTimer(difficulty);
     document.getElementById("answer").focus();
 }
+
+
+// Script to open and close "hint" modal
+const hinText = document.getElementById("hint-text");
+const hintModal = document.getElementById("hint-modal");
+const openHintModal = document.getElementsByClassName("open-hint")[0];
+const closeHintModal = document.getElementsByClassName("close-hint")[0];
+
+openHintModal.addEventListener("click", function () {
+    hintModal.showModal();
+    hinText.innerHTML = questionsArray[questionsCurrentIndex].hint;
+    // Points from score will be subtracted only once per round
+    if (!askedForHint) {
+        askedForHint = true;
+        if (difficulty === "hard") {
+            userScore -= 2;
+        } else if (difficulty == "normal") {
+            userScore--;
+        }
+        scoreElement.innerText = userScore;
+    }
+});
+
+closeHintModal.addEventListener("click", function () {
+    hintModal.close();
+});
+
+
 
 /**
  * Checks if the answer is correct.

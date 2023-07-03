@@ -24,7 +24,7 @@
                         <button class="btn open-how-to-play">
                             <h3>How to play</h3>
                         </button>
-                        <dialog class="how-to-play-modal">
+                        <dialog id="how-to-play-modal" class="modal">
                             <p>Each game consists of 8 rounds. In each of them you are presented with an anagram related
                                 to
                                 the theme you have selected and have to find the right word.</p>
@@ -32,9 +32,8 @@
                                 select.
                                 In the Normal level there are 60 seconds and in the hard only 30.</p>
                             <p>Every correct answer gives you 3 points.</p>
-                            <p>You can also ask for a hint for each word. If you use this option you will only get 1
-                                point
-                                if you can then find the solution.</p>
+                            <p>You can ask for a hint in each word, but doing so will deduct 1 point from your score in
+                                the normal level and 2 points in the hard level.</p>
                             <button class="btn close-how-to-play">Close</button>
                         </dialog>
                     </div>
@@ -86,7 +85,11 @@
                         <input type="text" id="answer">
                     </div>
                     <div>
-                        <button class="btn">Hint</button>
+                        <button class="btn open-hint">Hint</button>
+                        <dialog id="hint-modal" class="modal">
+                            <p id="hint-text"></p>
+                            <button class="btn close-hint">Close</button>
+                        </dialog>
                         <button class="btn" id="check-answer">Check Answer</button>
                     </div>
 
