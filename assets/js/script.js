@@ -68,6 +68,10 @@ function startGame() {
 
 // Selecting questions
 const numberOfRounds = 8;
+const timeHardDifficulty = 30;
+const timeNormalDifficulty = 60;
+let counter;
+let interval;
 const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
 let questionElement = document.getElementById("anagram");
@@ -78,13 +82,42 @@ let currentRound = 1;
 let scoreElement = document.getElementById("score");
 let userScore = 0;
 
-/** 
- * Sets the array of questions depending on the theme selected by the user.
+
+/**
+ *  * Sets the array of questions depending on the theme selected by the user.
  * To avoid having always the same questions in the same order, the questions
  * are randomized using the sort function and subtracting .5
-*/
+ * @param {*} theme 
+ */
 function setQuestions(theme) {
     questionsArray = anagrams[theme].sort(() => Math.random() - .5);
+}
+
+/**
+ * Starts the timer depending on the difficulty chose by the user.
+ * If the user runs out of time the checkAnswer function is called.
+ * @param {*} difficulty 
+ */
+function startTimer(difficulty) {
+    if (difficulty === "normal") {
+        counter = timeNormalDifficulty;
+    } else if (difficulty === "hard") {
+        counter = timeHardDifficulty;
+    } else {
+        alert(`Something went wrong! ${difficulty} unknown`);
+        throw (`Difficulty ${difficulty} was not defined!`);
+    }
+
+    const interval = setInterval(function () {
+        document.getElementById("time-left").innerText = counter === 1 ? `${counter} second` : `${counter} seconds`;
+        counter--;
+
+        if (counter < 0) {
+            clearInterval(interval);
+            checkAnswer();
+        }
+    }, 1000);
+
 }
 
 /**
@@ -94,6 +127,7 @@ function setNextQuestion() {
     roundElement.innerText = currentRound;
     scoreElement.innerText = userScore;
     questionElement.innerText = questionsArray[questionsCurrentIndex].anagram;
+    startTimer(difficulty);
     document.getElementById("answer").focus();
 }
 
@@ -103,7 +137,7 @@ function setNextQuestion() {
  * After checking, calls the function to asses the state of the game
  */
 function checkAnswer() {
-    userAnswer = document.getElementById("answer").value;
+    userAnswer = document.getElementById("answer").value.toLowerCase();
     if (userAnswer === questionsArray[questionsCurrentIndex].name) {
         alert("Correct!");
         userScore += 3;
