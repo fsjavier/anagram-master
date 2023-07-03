@@ -67,6 +67,7 @@ function startGame() {
 }
 
 // Selecting questions
+const numberOfRounds = 8;
 const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
 let questionElement = document.getElementById("anagram");
@@ -96,7 +97,11 @@ function setNextQuestion() {
     document.getElementById("answer").focus();
 }
 
-
+/**
+ * Checks if the answer is correct.
+ * If it's correct increases the score.
+ * After checking, calls the function to asses the state of the game
+ */
 function checkAnswer() {
     userAnswer = document.getElementById("answer").value;
     if (userAnswer === questionsArray[questionsCurrentIndex].name) {
@@ -110,9 +115,13 @@ function checkAnswer() {
     assesGameState();
 }
 
+/**
+ * Increases the question index by 1 and checks if has reached the last question.
+ * If it hasn't reached the end it sets the next question after a short delay.
+ */
 function assesGameState() {
     questionsCurrentIndex++;
-    if (questionsCurrentIndex <= 7) {
+    if (questionsCurrentIndex <= (numberOfRounds - 1)) {
         setTimeout(setNextQuestion, 1200);
         currentRound++;
     } else {
