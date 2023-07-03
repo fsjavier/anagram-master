@@ -67,11 +67,15 @@ function startGame() {
 }
 
 // Selecting questions
+const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
 let questionElement = document.getElementById("anagram");
-const userAnswer = document.getElementById("answer");
+let userAnswer;
 let questionsCurrentIndex = 0;
+let roundElement = document.getElementById("round");
 let currentRound = 1;
+let scoreElement = document.getElementById("score");
+let userScore = 0;
 
 /** 
  * Sets the array of questions depending on the theme selected by the user.
@@ -86,14 +90,39 @@ function setQuestions(theme) {
  * Assign the inner text of the html anagram element to the selected question.
  */
 function setNextQuestion() {
+    roundElement.innerText = currentRound;
+    scoreElement.innerText = userScore;
     questionElement.innerText = questionsArray[questionsCurrentIndex].anagram;
+    document.getElementById("answer").focus();
+}
+
+
+function checkAnswer() {
+    userAnswer = document.getElementById("answer").value;
+    if (userAnswer === questionsArray[questionsCurrentIndex].name) {
+        alert("Correct!");
+        userScore += 3;
+        scoreElement.innerText = userScore;
+    } else {
+        alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
+    }
+    document.getElementById("answer").value = "";
+    assesGameState();
+}
+
+function assesGameState() {
+    questionsCurrentIndex++;
+    if (questionsCurrentIndex <= 7) {
+        setTimeout(setNextQuestion, 1200);
+        currentRound++;
+    } else {
+        alert("Game over");
+    }
 }
 
 
 
-
-
-
+checkAnswerBtn.addEventListener("click", checkAnswer);
 
 
 
@@ -112,6 +141,21 @@ const anagrams = {
             name: "lion",
             anagram: "loin",
             hint: "King of the jungle"
+        },
+        {
+            name: "giraffe",
+            anagram: "fearfig",
+            hint: "Tallest living animal"
+        },
+        {
+            name: "elephant",
+            anagram: "thepanel",
+            hint: "Largest existing land animal"
+        },
+        {
+            name: "hippopotamus",
+            anagram: "ahpompoustip",
+            hint: "Very big mammal with big mouth and short legs"
         },
         {
             name: "giraffe",
