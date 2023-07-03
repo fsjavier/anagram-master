@@ -15,7 +15,6 @@ closeHowToPlayModal.addEventListener("click", function () {
 let difficulty;
 let theme;
 
-
 let difficultyButtons = document.getElementsByClassName("diff-button");
 for (let button of difficultyButtons) {
     button.addEventListener("click", function () {
@@ -38,15 +37,19 @@ for (let button of themeButtons) {
 
 
 
-
-
 // Game Logic
 
-const startGame = document.getElementById("start-button");
+// Starting the game
+const startButton = document.getElementById("start-button");
 const gameContainer = document.getElementsByClassName("game-container")[0];
 let anagram = document.getElementById("anagram");
 
-startGame.addEventListener("click", function () {
+startButton.addEventListener("click", function () {
+    startGame();
+    setNextQuestion();
+});
+
+function startGame() {
     // Prevent the game from starting if a difficulty level and theme have not been selected
     if (!difficulty || !theme) {
         alert("To start the game select a Difficulty Level and Theme");
@@ -59,21 +62,32 @@ startGame.addEventListener("click", function () {
     document.getElementsByClassName("top-container")[0].classList.add("flex");
     document.getElementsByClassName("anagram-container")[0].classList.add("flex");
     document.getElementsByClassName("bottom-container")[0].classList.add("flex");
-});
 
+    setQuestions(theme);
+}
 
+// Selecting questions
+let questionsArray;
+let questionElement = document.getElementById("anagram");
+const userAnswer = document.getElementById("answer");
+let questionsCurrentIndex = 0;
+let currentRound = 1;
 
+/** 
+ * Sets the array of questions depending on the theme selected by the user.
+ * To avoid having always the same questions in the same order, the questions
+ * are randomized using the sort function and subtracting .5
+*/
+function setQuestions(theme) {
+    questionsArray = anagrams[theme].sort(() => Math.random() - .5);
+}
 
-
-
-
-
-
-
-
-
-
-
+/**
+ * Assign the inner text of the html anagram element to the selected question.
+ */
+function setNextQuestion() {
+    questionElement.innerText = questionsArray[questionsCurrentIndex].anagram;
+}
 
 
 
