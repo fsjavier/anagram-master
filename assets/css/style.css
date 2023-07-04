@@ -10,7 +10,7 @@ a {
 
 /* index.html */
 body {
-    background-color: blueviolet;
+    background: url('../images/bg-main.jpg') no-repeat center;
 }
 
 .outer-container {
@@ -71,13 +71,11 @@ h2.info-page {
 }
 
 .difficulty h3 {
-    width: 50%;
     text-align: center;
 }
 
 .diff-buttons {
     display: grid;
-    width: 50%;
     text-align: center;
 }
 
@@ -98,7 +96,6 @@ h2.info-page {
 }
 
 .theme h3 {
-    width: 50%;
     text-align: center;
 }
 
@@ -175,16 +172,25 @@ h2.info-page {
         flex-direction: row;
     }
 
+    .difficulty h3 {
+    width: 40%;
+    }
+    
+    .diff-buttons {
+        width: 60%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .theme {
         flex-direction: row;
     }
 
-    /* change buttons to two columns */
-    .diff-buttons {
-        grid-template-columns: repeat(2, 1fr);
+    .theme h3 {
+        width: 40%;
     }
 
     .theme-buttons {
+        width: 60%;
         grid-template-columns: repeat(2, 1fr);
     }
 }
