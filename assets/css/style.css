@@ -49,6 +49,10 @@ h2.info-page {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & h3 {
+        padding: 0.2rem 1rem;
+    }
 }
 
 /* modal */
@@ -80,6 +84,7 @@ h2.info-page {
 .diff-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
     text-align: center;
     width: 100%;
 }
@@ -103,6 +108,7 @@ h2.info-page {
 
 .theme-buttons {
     display: grid;
+    gap: .5rem;
     width: 100%;
     text-align: center;
 }
@@ -128,6 +134,11 @@ h2.info-page {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
+
+    & h2 {
+        text-transform: uppercase;
+        padding: 0.2rem 1.5rem;
+    }
 }
 
 
