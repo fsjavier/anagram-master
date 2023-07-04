@@ -58,11 +58,18 @@ h2.info-page {
 /* modal */
 .modal {
     padding: 1rem;
-    max-width: 33vw;
+    max-width: 75vw;
+    margin: auto;
+    border: 0;
 
     &>* {
         margin: 0 0 0.5rem 0;
     }
+}
+
+.modal::backdrop {
+    background: radial-gradient(circle, rgba(2,0,36,1) 25%, rgba(9,65,121,0.9122023809523809) 90%, rgba(0,212,255,1) 125%);
+    opacity: .7;
 }
 
 
@@ -215,11 +222,19 @@ h2.info-page {
         width: 60%;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .modal {
+        max-width: 60vw;
+    }
 }
 
 /* laptop size */
 @media screen and (min-width: 1200px) {
     .container {
         width: 50%;
+    }
+
+    .modal {
+        max-width: 33vw;
     }
 }
