@@ -274,6 +274,18 @@ const anagrams = {
             name: "seven",
             anagram: "evens",
             hint: "Crime thriller starring Morgan Freeman and Brad Pitt"
+        },
+        {
+            name: "the dark knight",
+            anagram: "thank third keg",
+            hint: "Redifined movies of superheros and villains"
+        }
+    ],
+    music: [
+        {
+            name: "linkin park",
+            anagram: "plan kirk in",
+            hint: "Created big hits like 'Numb' or 'In The End'"
         }
     ]
 };
