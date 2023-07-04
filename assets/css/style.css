@@ -60,7 +60,6 @@ h2.info-page {
     padding: 1rem;
     max-width: 75vw;
     margin: auto;
-    border: 0;
 
     &>* {
         margin: 0 0 0.5rem 0;
@@ -180,6 +179,29 @@ h2.info-page {
     height: 60%;
 }
 
+#anagram {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+#answer-container {
+    width: 80%;
+    text-align: center
+}
+
+#answer {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 100%;
+    font-weight: 600;
+}
+
 /* Change game background to show that the answer was correct / incorrect */
 .correct {
     background-color: green;
@@ -225,6 +247,10 @@ h2.info-page {
 
     .modal {
         max-width: 60vw;
+    }
+
+    #answer-container {
+        width: 50%;
     }
 }
 

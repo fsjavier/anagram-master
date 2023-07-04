@@ -125,8 +125,8 @@ function startTimer(difficulty) {
  * Assign the inner text of the html anagram element to the selected question.
  */
 function setNextQuestion() {
-    gameContainer.classList.remove("correct");
-    gameContainer.classList.remove("incorrect");
+    document.getElementById("answer-container").classList.remove("correct");
+    document.getElementById("answer-container").classList.remove("incorrect");
     clearInterval(interval);
     askedForHint = false;
     roundElement.innerText = currentRound;
@@ -173,11 +173,11 @@ function checkAnswer() {
     userAnswer = document.getElementById("answer").value.toLowerCase();
     if (userAnswer === questionsArray[questionsCurrentIndex].name) {
         // alert("Correct!");
-        gameContainer.classList.add("correct");
+        document.getElementById("answer-container").classList.add("correct");
         userScore += 3;
         scoreElement.innerText = userScore;
     } else {
-        gameContainer.classList.add("incorrect");
+        document.getElementById("answer-container").classList.add("incorrect");
 
         // alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
     }
