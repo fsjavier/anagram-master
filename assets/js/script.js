@@ -181,7 +181,7 @@ function checkAnswer() {
 
         // alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
     }
-    document.getElementById("answer").value = "";
+    // document.getElementById("answer").value = "";
     assesGameState();
 }
 
@@ -192,7 +192,10 @@ function checkAnswer() {
 function assesGameState() {
     questionsCurrentIndex++;
     if (questionsCurrentIndex <= (numberOfRounds - 1)) {
-        setTimeout(setNextQuestion, 1200);
+        setTimeout(setNextQuestion, 2000);
+        setTimeout(function () {
+            document.getElementById("answer").value = "";
+        }, 2000);
         currentRound++;
     } else {
         alert("Game over");
