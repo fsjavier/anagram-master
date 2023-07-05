@@ -214,6 +214,14 @@ h2.info-page {
     background-color: red;
 }
 
+/* final screen */
+
+#final-container {
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 /* Media queries */
 

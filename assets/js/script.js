@@ -82,6 +82,7 @@ let currentRound = 1;
 let askedForHint = false;
 let scoreElement = document.getElementById("score");
 let userScore = 0;
+let finalScoreElement = document.getElementById("final-score");
 
 
 /**
@@ -200,7 +201,11 @@ function assesGameState() {
         }, 2000);
         currentRound++;
     } else {
-        alert("Game over");
+        // alert("Game over");
+        finalScoreElement.innerText = userScore;
+        document.getElementById("game-container").classList.add("hide");
+        document.getElementById("final-container").classList.remove("hide");
+        document.getElementById("final-container").classList.add("flex");
     }
 }
 
