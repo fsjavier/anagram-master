@@ -67,7 +67,7 @@ h2.info-page {
 }
 
 .modal::backdrop {
-    background: radial-gradient(circle, rgba(2,0,36,1) 25%, rgba(9,65,121,0.9122023809523809) 90%, rgba(0,212,255,1) 125%);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 25%, rgba(9, 65, 121, 0.9122023809523809) 90%, rgba(0, 212, 255, 1) 125%);
     opacity: .7;
 }
 
@@ -98,7 +98,7 @@ h2.info-page {
 /* to be targeted with JS when user clicks*/
 .selected-btn-diff,
 .selected-btn-theme {
-    background: radial-gradient(circle, rgba(2,0,36,1) 60%, rgba(9,65,121,0.9122023809523809) 95%, rgba(0,212,255,1) 150%);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 60%, rgba(9, 65, 121, 0.9122023809523809) 95%, rgba(0, 212, 255, 1) 150%);
     transform: scale(1.1);
     transition: transform 200ms;
     box-shadow: 0 0 1px 1px;
@@ -120,7 +120,7 @@ h2.info-page {
 }
 
 .btn {
-    background: radial-gradient(circle, rgba(2,0,36,1) 25%, rgba(9,65,121,0.9122023809523809) 90%, rgba(0,212,255,1) 125%);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 25%, rgba(9, 65, 121, 0.9122023809523809) 90%, rgba(0, 212, 255, 1) 125%);
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.03rem;
@@ -133,7 +133,7 @@ h2.info-page {
 
 .btn:hover {
     cursor: pointer;
-    background: radial-gradient(circle, rgba(2,0,36,1) 60%, rgba(9,65,121,0.9122023809523809) 95%, rgba(0,212,255,1) 150%);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 60%, rgba(9, 65, 121, 0.9122023809523809) 95%, rgba(0, 212, 255, 1) 150%);
 }
 
 #start {
@@ -145,6 +145,10 @@ h2.info-page {
         text-transform: uppercase;
         padding: 0.2rem 1.5rem;
     }
+}
+
+#start-requirement {
+    text-align: center;
 }
 
 
@@ -225,9 +229,9 @@ h2.info-page {
     }
 
     .difficulty h3 {
-    width: 40%;
+        width: 40%;
     }
-    
+
     .diff-buttons {
         width: 60%;
     }

@@ -52,7 +52,7 @@ startButton.addEventListener("click", function () {
 function startGame() {
     // Prevent the game from starting if a difficulty level and theme have not been selected
     if (!difficulty || !theme) {
-        alert("To start the game select a Difficulty Level and Theme");
+        document.getElementById("start-requirement").classList.remove("hide");
         return;
     }
 
