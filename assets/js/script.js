@@ -41,7 +41,7 @@ for (let button of themeButtons) {
 
 // Starting the game
 const startButton = document.getElementById("start-button");
-const gameContainer = document.getElementsByClassName("game-container")[0];
+const gameContainer = document.getElementById("game-container");
 let anagram = document.getElementById("anagram");
 
 startButton.addEventListener("click", function () {
@@ -57,11 +57,11 @@ function startGame() {
     }
 
     // Hide info and display questions applying style
-    document.getElementsByClassName("info-container")[0].classList.add("hide");
-    document.getElementsByClassName("game-container")[0].classList.remove("hide");
-    document.getElementsByClassName("top-container")[0].classList.add("flex");
-    document.getElementsByClassName("anagram-container")[0].classList.add("flex");
-    document.getElementsByClassName("bottom-container")[0].classList.add("flex");
+    document.getElementById("info-container").classList.add("hide");
+    document.getElementById("game-container").classList.remove("hide");
+    document.getElementById("top-container").classList.add("flex");
+    document.getElementById("anagram-container").classList.add("flex");
+    document.getElementById("bottom-container").classList.add("flex");
 
     setQuestions(theme);
 }
@@ -181,7 +181,7 @@ function checkAnswer() {
 
         // alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
     }
-    // document.getElementById("answer").value = "";
+    document.getElementsByTagName("input")[0].setAttribute("disabled", true);
     assesGameState();
 }
 
@@ -192,9 +192,11 @@ function checkAnswer() {
 function assesGameState() {
     questionsCurrentIndex++;
     if (questionsCurrentIndex <= (numberOfRounds - 1)) {
-        setTimeout(setNextQuestion, 2000);
+        // setTimeout(setNextQuestion, 2000);
         setTimeout(function () {
+            document.getElementsByTagName("input")[0].removeAttribute("disabled");
             document.getElementById("answer").value = "";
+            setNextQuestion();
         }, 2000);
         currentRound++;
     } else {

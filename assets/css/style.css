@@ -13,7 +13,7 @@ body {
     background: url('../images/bg-main.jpg') no-repeat center;
 }
 
-.outer-container {
+#outer-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ body {
     width: 100vw;
 }
 
-.container {
+#container {
     width: 90%;
 }
 
@@ -36,8 +36,7 @@ h2.info-page {
     padding-bottom: .5rem;
 }
 
-.info-container,
-.game-container {
+.main-container {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border-radius: 20px;
@@ -161,21 +160,21 @@ h2.info-page {
     display: flex;
 }
 
-.game-container {
+#game-container {
     height: 50vh;
     justify-content: center;
     align-items: center;
 }
 
-.top-container,
-.bottom-container {
+#top-container,
+#bottom-container {
     /* when loaded display should be set to flex */
     justify-content: space-between;
     align-items: center;
     height: 20%;
 }
 
-.anagram-container {
+#anagram-container {
     /* when loaded display should be set to flex */
     flex-direction: column;
     justify-content: space-evenly;
@@ -220,7 +219,7 @@ h2.info-page {
 
 /* tablet size */
 @media screen and (min-width: 750px) {
-    .container {
+    #container {
         width: 70%;
     }
 
@@ -260,7 +259,7 @@ h2.info-page {
 
 /* laptop size */
 @media screen and (min-width: 1200px) {
-    .container {
+    #container {
         width: 50%;
     }
 
