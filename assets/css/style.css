@@ -1,3 +1,6 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Electrolize&display=swap');
+
 /* general rules */
 * {
     margin: 0;
@@ -8,9 +11,14 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3 {
+    font-family: Electrolize, sans-serif;
+}
+
 /* index.html */
 body {
     background: url('../images/bg-main.jpg') no-repeat center;
+    font-family: "Chewy", sans-serif;
 }
 
 #outer-container {
@@ -128,6 +136,7 @@ h2.info-page {
     border: none;
     padding: .8rem;
     margin: .5rem;
+    font-family: Chewy;
 }
 
 .btn:hover {
