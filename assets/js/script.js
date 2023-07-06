@@ -58,8 +58,8 @@ function startGame() {
 
     // Hide info and display questions applying style
     document.getElementById("info-container").classList.add("hide");
-    document.getElementById("test").classList.remove("background-info");
-    document.getElementById("test").classList.add(`background-${theme}`);
+    document.getElementsByTagName("body")[0].classList.remove("background-info");
+    document.getElementsByTagName("body")[0].classList.add(`background-${theme}`);
     document.getElementById("game-container").classList.remove("hide");
     document.getElementById("top-container").classList.add("flex");
     document.getElementById("anagram-container").classList.add("flex");
