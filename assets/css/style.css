@@ -17,8 +17,35 @@ h1, h2, h3 {
 
 /* index.html */
 body {
-    background: url('../images/bg-main.jpg') no-repeat center;
     font-family: "Chewy", sans-serif;
+}
+
+.background-info {
+    background: url('../images/bg-main.jpg') no-repeat center;
+    background-color: darkslategray;
+    background-blend-mode: luminosity;
+}
+
+.background-animals {
+    background: url('../images/bg-animals.jpg') no-repeat center;
+}
+
+.background-movies {
+    background: url('../images/bg-movies.jpg') no-repeat center;
+    background-color: darkslategray;
+    background-blend-mode: exclusion;
+}
+
+.background-music {
+    background: url('../images/bg-music.jpg') no-repeat center;
+    background-color: grey;
+    background-blend-mode: difference;
+}
+
+.background-countries {
+    background: url('../images/bg-countries.jpg') no-repeat center;
+    background-color: grey;
+    background-blend-mode: difference;
 }
 
 #outer-container {
@@ -271,7 +298,7 @@ h2.info-page {
     }
 
     #answer-container {
-        width: 50%;
+        width: 70%;
     }
 }
 
