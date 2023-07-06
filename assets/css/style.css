@@ -209,9 +209,10 @@ h2.info-page {
     color: white;
     border: 1px solid white;
     border-radius: 5px;
-    height: 2.5rem;
+    height: 3rem;
     width: 100%;
     font-weight: 600;
+    font-size: 1.5rem;
 }
 
 /* Change game background to show that the answer was correct / incorrect */
