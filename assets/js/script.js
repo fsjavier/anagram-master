@@ -78,7 +78,6 @@ const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
 let themeChosenElement = document.getElementById("theme-chosen");
 let questionElement = document.getElementById("anagram");
-let userAnswer = document.getElementById("answer");
 let questionsCurrentIndex = 0;
 let roundElement = document.getElementById("round");
 let currentRound = 1;
@@ -175,7 +174,7 @@ closeHintModal.addEventListener("click", function () {
  * After checking, calls the function to asses the state of the game
  */
 function checkAnswer() {
-    userAnswer = document.getElementById("answer").value.toLowerCase();
+    let userAnswer = document.getElementById("answer").value.toLowerCase();
     if (userAnswer === questionsArray[questionsCurrentIndex].name) {
         // alert("Correct!");
         document.getElementById("answer-container").classList.add("correct");
@@ -217,9 +216,15 @@ function assesGameState() {
 /* Checks the answer from the user either clicking on Check Answer
    or pressing Enter as long as the field is not empty.
 */
-checkAnswerBtn.addEventListener("click", checkAnswer);
-userAnswer.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" && userAnswer.value !== "") {
+// checkAnswerBtn.addEventListener("click", checkAnswer);
+checkAnswerBtn.addEventListener("click", function() {
+    if (document.getElementById("answer").value.length !== 0) {
+        checkAnswer();
+    }
+});
+
+document.getElementById("answer").addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && this.value.length !== 0) {
         checkAnswer();
     }
 });
