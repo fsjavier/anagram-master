@@ -210,6 +210,7 @@ function assesGameState() {
         document.getElementById("game-container").classList.add("hide");
         document.getElementById("final-container").classList.remove("hide");
         document.getElementById("final-container").classList.add("flex");
+        document.getElementById("outer-container").style.height = "100%"
     }
 }
 
@@ -334,7 +335,7 @@ const anagrams = {
         {
             name: "radiohead",
             anagram: "hoardaide",
-            hint: "Their imeless hits like 'Creep', 'Karma Police', and 'Paranoid Android' have left an indelible mark on music history"
+            hint: "Their timeless hits like 'Creep', 'Karma Police', and 'Paranoid Android' have left an indelible mark on music history"
         },
         {
             name: "the police",
@@ -352,7 +353,7 @@ const anagrams = {
             hint: "Heavy metal band with iconic hits like 'Enter Sandman' and 'Master of Puppets'"
         },
         {
-            name: "pink floid",
+            name: "pink floyd",
             anagram: "kindly fop",
             hint: "Rock band with timeless hits like 'Wish You Were Here' and 'Comfortably Numb' "
         },
@@ -367,8 +368,8 @@ const anagrams = {
             hint: "groundbreaking grunge band that revolutionized the music scene"
         },
         {
-            name: "perturbing scenes",
-            anagram: "bruce springsteen",
+            name: "bruce springsteen",
+            anagram: "perturbing scenes",
             hint: "Legendary rock artist 'Born to run' known for his poetic storytelling and passionate performances"
         }
     ],
