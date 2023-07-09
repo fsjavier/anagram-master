@@ -164,6 +164,7 @@ openHintModal.addEventListener("click", function () {
 
 closeHintModal.addEventListener("click", function () {
     hintModal.close();
+    document.getElementById("answer").focus();
 });
 
 
@@ -220,12 +221,16 @@ function assesGameState() {
 checkAnswerBtn.addEventListener("click", function() {
     if (document.getElementById("answer").value.length !== 0) {
         checkAnswer();
+    } else {
+        document.getElementById("answer").focus();
     }
 });
 
 document.getElementById("answer").addEventListener("keydown", function (event) {
     if (event.key === "Enter" && this.value.length !== 0) {
         checkAnswer();
+    } else {
+        document.getElementById("answer").focus();
     }
 });
 
