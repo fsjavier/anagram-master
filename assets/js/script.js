@@ -53,7 +53,7 @@ function startGame() {
     // Prevent the game from starting if a difficulty level and theme have not been selected
     if (!difficulty || !theme) {
         document.getElementById("start-requirement").classList.remove("hide");
-        return;
+        throw("Missing difficulty or theme")
     }
 
     // Hide info and display questions applying style
@@ -76,6 +76,7 @@ let counter;
 let interval;
 const checkAnswerBtn = document.getElementById("check-answer");
 let questionsArray;
+let themeChosenElement = document.getElementById("theme-chosen");
 let questionElement = document.getElementById("anagram");
 let userAnswer = document.getElementById("answer");
 let questionsCurrentIndex = 0;
@@ -113,7 +114,7 @@ function startTimer(difficulty) {
     }
 
     interval = setInterval(function () {
-        document.getElementById("time-left").innerText = counter === 1 ? `${counter} second` : `${counter} seconds`;
+        document.getElementById("time-left").innerText = `${counter}s`;
         counter--;
 
         if (counter < 0) {
@@ -134,6 +135,7 @@ function setNextQuestion() {
     askedForHint = false;
     roundElement.innerText = currentRound;
     scoreElement.innerText = userScore;
+    themeChosenElement.innerText = theme;
     questionElement.innerText = questionsArray[questionsCurrentIndex].anagram;
     startTimer(difficulty);
     document.getElementById("answer").focus();
