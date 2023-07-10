@@ -281,6 +281,14 @@ h2.info-page {
     height: 50vh;
     justify-content: space-evenly;
     align-items: center;
+
+    & > .middle-container {
+        text-align: center;
+
+        & > h3 {
+            padding: 1rem;
+        }
+    }
 }
 
 /* Media queries */
