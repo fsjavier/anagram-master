@@ -85,6 +85,8 @@ let askedForHint = false;
 let scoreElement = document.getElementById("score");
 let userScore = 0;
 let finalScoreElement = document.getElementById("final-score");
+let highestScoreElement = document.getElementById("highest-score");
+let highestScore = 0;
 
 
 /**
@@ -206,6 +208,7 @@ function assesGameState() {
         currentRound++;
     } else {
         // alert("Game over");
+        updateHighestScore();
         finalScoreElement.innerText = userScore;
         document.getElementById("game-container").classList.add("hide");
         document.getElementById("final-container").classList.remove("hide");
@@ -217,7 +220,6 @@ function assesGameState() {
 /* Checks the answer from the user either clicking on Check Answer
    or pressing Enter as long as the field is not empty.
 */
-// checkAnswerBtn.addEventListener("click", checkAnswer);
 checkAnswerBtn.addEventListener("click", function() {
     if (document.getElementById("answer").value.length !== 0) {
         checkAnswer();
@@ -234,7 +236,15 @@ document.getElementById("answer").addEventListener("keydown", function (event) {
     }
 });
 
-
+// Check final score and set highest score
+function updateHighestScore() {
+    if(userScore > localStorage.getItem(highestScore)) {
+        localStorage.setItem(highestScore, userScore);
+        highestScoreElement.innerText = localStorage.getItem(highestScore);
+    } else {
+        highestScoreElement.innerHTML = localStorage.getItem(highestScore);
+    }
+}
 
 
 
