@@ -99,7 +99,7 @@ h2.info-page {
 }
 
 /* modal */
-.modal {
+/* .modal {
     padding: 1rem;
     max-width: 75vw;
     margin: auto;
@@ -107,12 +107,62 @@ h2.info-page {
     &>* {
         margin: 0 0 0.5rem 0;
     }
-}
+} */
 
-.modal::backdrop {
-    background: radial-gradient(circle, rgba(2, 0, 36, 1) 25%, rgba(9, 65, 121, 0.9122023809523809) 90%, rgba(0, 212, 255, 1) 125%);
-    opacity: .7;
-}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+  .modal-text {
+    width: 90%;
+    margin: 1.5rem auto;
+
+    & p {
+        padding-bottom: .5rem;
+    }
+  }
+  
+  /* The Close Button */
+  .close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: .8rem;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 
 .difficulty {
@@ -329,10 +379,6 @@ h2.info-page {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .modal {
-        max-width: 60vw;
-    }
-
     #game-container {
         height: 50vh;
     }
@@ -344,6 +390,14 @@ h2.info-page {
     #answer {
         font-size: 1.5rem;
     }
+
+    .modal-content {
+        width: 65%;
+    }
+
+    .modal-text {
+        width: 95%;
+    }
 }
 
 /* laptop size */
@@ -352,7 +406,7 @@ h2.info-page {
         width: 50%;
     }
 
-    .modal {
-        max-width: 33vw;
+    .modal-content {
+        width: 50%;
     }
 }

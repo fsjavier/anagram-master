@@ -1,15 +1,24 @@
 // Script to open and close "how to play" modal
 const howToPlayModal = document.getElementById("how-to-play-modal");
 const openHowToPlayModal = document.getElementsByClassName("open-how-to-play")[0];
-const closeHowToPlayModal = document.getElementsByClassName("close-how-to-play")[0];
+const closeHowToPlayModal = document.getElementById("close-how-to-play");
 
-openHowToPlayModal.addEventListener("click", function () {
-    howToPlayModal.showModal();
-});
+// When the user clicks the button, open the modal 
+openHowToPlayModal.addEventListener("click", function() {
+    howToPlayModal.style.display = "flex";
+})
 
-closeHowToPlayModal.addEventListener("click", function () {
-    howToPlayModal.close();
-});
+// When the user clicks on <span> (x), close the modal
+closeHowToPlayModal.addEventListener("click", function() {
+    howToPlayModal.style.display = "none";
+})
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+  if (event.target == howToPlayModal) {
+    howToPlayModal.style.display = "none";
+  }
+})
 
 // Choose difficulty and theme
 let difficulty;
@@ -147,10 +156,11 @@ function setNextQuestion() {
 const hinText = document.getElementById("hint-text");
 const hintModal = document.getElementById("hint-modal");
 const openHintModal = document.getElementsByClassName("open-hint")[0];
-const closeHintModal = document.getElementsByClassName("close-hint")[0];
+const closeHintModal = document.getElementById("close-hint");
 
+// When the user clicks the button, open the modal 
 openHintModal.addEventListener("click", function () {
-    hintModal.showModal();
+    hintModal.style.display = "flex";
     hinText.innerHTML = questionsArray[questionsCurrentIndex].hint;
     // Points from score will be subtracted only once per round
     if (!askedForHint) {
@@ -164,10 +174,19 @@ openHintModal.addEventListener("click", function () {
     }
 });
 
-closeHintModal.addEventListener("click", function () {
-    hintModal.close();
+// When the user clicks on <span> (x), close the modal
+closeHintModal.addEventListener("click", function() {
+    hintModal.style.display = "none";
     document.getElementById("answer").focus();
-});
+})
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+    if (event.target == hintModal) {
+        hintModal.style.display = "none";
+    }
+  })
+
 
 
 
@@ -280,7 +299,7 @@ const anagrams = {
         },
         {
             name: "leopard",
-            anagram: "parole",
+            anagram: "paroled",
             hint: "Big cat known for its distinctive spots"
         },
         {
@@ -349,7 +368,7 @@ const anagrams = {
     music: [
         {
             name: "linkin park",
-            anagram: "plan kirk in",
+            anagram: "plan kirkin",
             hint: "Created big hits like 'Numb' or 'In The End'"
         },
         {

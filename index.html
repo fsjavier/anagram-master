@@ -13,6 +13,40 @@
 </head>
 
 <body class="background-info">
+
+
+    <!-- Modals start: They are here so they can cover the full width of the screen -->
+    <!-- Starts how to play modal -->
+    <div id="how-to-play-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id ="close-how-to-play">&times;</span>
+            <div class="modal-text">
+                <p>Each game consists of 8 rounds. In each of them you are presented with an anagram related
+                    to
+                    the theme you have selected and have to find the right word.</p>
+                <p>The time you have to find the word in each round depend on the difficulty level you
+                    select.
+                    In the Normal level you have 45 seconds to solve the anagram and in the hard 25.</p>
+                <p>Every correct answer gives you 3 points.</p>
+                <p>You can ask for a hint in each word, but doing so will deduct 1 point from your score in
+                    the normal level and 2 points in the hard level.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Ends how to play modal -->  
+
+    <!-- Starts Hint modal -->
+    <div id="hint-modal" class="modal">
+        <div class="modal-content" >
+            <span class="close-modal" id="close-hint">&times;</span>
+            <div class="modal-text">
+                <p id="hint-text"></p>
+            </div>
+        </div>
+    </div>
+    <!-- Ends Hint modal -->
+    <!-- Modals end -->
+
     <main id="outer-container">
         <div id="container">
             <h1>Anagram Master</h1>
@@ -22,23 +56,10 @@
                 <div class="game-info">
                     <h2 class="info-page">Will you be the next Anagram Master?</h2>
                     <div class="how-to-play">
+                        <!-- Opens how to play modal -->
                         <button class="btn open-how-to-play">
                             <h3><i class="far fa-question-circle"></i>  How to play</h3>
                         </button>
-                        <!-- Starts how to play modal -->
-                        <dialog id="how-to-play-modal" class="modal">
-                            <p>Each game consists of 8 rounds. In each of them you are presented with an anagram related
-                                to
-                                the theme you have selected and have to find the right word.</p>
-                            <p>The time you have to find the word in each round depend on the difficulty level you
-                                select.
-                                In the Normal level you have 45 seconds to solve the anagram and in the hard 25.</p>
-                            <p>Every correct answer gives you 3 points.</p>
-                            <p>You can ask for a hint in each word, but doing so will deduct 1 point from your score in
-                                the normal level and 2 points in the hard level.</p>
-                            <button class="btn close-how-to-play">Close</button>
-                        </dialog>
-                        <!-- Ends how to play modal -->
                     </div>
                 </div>
 
@@ -72,6 +93,7 @@
             <!-- Info screen ends -->
 
             <!-- Game screen starts -->
+
             <div id="game-container" class="main-container hide">
 
                 <div id="top-container">
@@ -97,12 +119,8 @@
                     </div>
                     <div>
                         <button class="btn open-hint">Hint</button>
-                        <!-- Starts Hint modal -->
-                        <dialog id="hint-modal" class="modal">
-                            <p id="hint-text"></p>
-                            <button class="btn close-hint">Close</button>
-                        </dialog>
-                        <!-- Ends Hint modal -->
+ 
+
                         <button class="btn" id="check-answer">Check Answer</button>
                     </div>
 
