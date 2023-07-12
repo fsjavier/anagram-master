@@ -40,7 +40,12 @@ The screens consists of:
     * The modal can be closed clicking on the "X" or anywhere outside the modal.
 * Select Difficulty: the user can select either "normal" or "hard".
 * Select Theme: the user can select the theme of the game. Only 1 of the 4 options can be chosen.
+* Hovering over a button and selecting a theme and difficulty highlights the button.
 * The "Let's go!" starts the game. If the user has not selected difficulty and/or theme they will be warned with a message above the button and it won't work until they do.
+
+<details><summary>Start Screen</summary>
+<img src="documentation/readme_images/start-screen.png">
+</details>
 
 ### Game screen
 
@@ -66,6 +71,19 @@ The screens consists of:
 * If the user runs out of time the answer will be checked.
 * After all rounds have been completed the game moves to the next screen.
 
+<details><summary>Game Screen (Animals Theme)</summary>
+<img src="documentation/readme_images/game-screen-animals.png">
+</details>
+<details><summary>Game Screen (Movies Theme)</summary>
+<img src="documentation/readme_images/game-screen-movies.png">
+</details>
+<details><summary>Game Screen (Music Theme)</summary>
+<img src="documentation/readme_images/game-screen-music.png">
+</details>
+<details><summary>Game Screen (Countries Theme)</summary>
+<img src="documentation/readme_images/game-screen-countries.png">
+</details>
+
 ### Game Over screen
 
 The screens consists of:
@@ -75,6 +93,10 @@ The screens consists of:
     * The user's highest score is saved on local storage.
     * If the current score is higher than the previous saved highest score, the highest score is updated.
 * "Play Again!" button sends the user back to the "Start screen".
+
+<details><summary>Game Over Screen</summary>
+<img src="documentation/readme_images/game-over-screen.png">
+</details>
 
 ### Features left to implement
 
@@ -87,6 +109,21 @@ The screens consists of:
 
 ### Wireframes
 
+<details><summary>Start Screen</summary>
+<img src="documentation/wireframes/wireframe-start-screen.png">
+</details>
+<details><summary>Start Screen - How to Play Modal</summary>
+<img src="documentation/wireframes/wireframe-start-screen-how-to-play.png">
+</details>
+<details><summary>Game Screen</summary>
+<img src="documentation/wireframes/wireframe-game-screen.png">
+</details>
+<details><summary>Game Screen - Hint Modale</summary>
+<img src="documentation/wireframes/wireframe-game-screen-hint.png">
+</details>
+<details><summary>Game Over Screen</summary>
+<img src="documentation/wireframes/wireframe-game-over-screen.png">
+</details>
 
 ## Technologies Used
 
