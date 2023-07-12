@@ -49,7 +49,7 @@
 
     <main id="outer-container">
         <div id="container">
-            <h1>Anagram Master</h1>
+            <h1><i class="fa-solid fa-crown"></i>  Anagram Master  <i class="fa-solid fa-crown"></i></h1>
 
             <!-- Info screen starts-->
             <div id="info-container" class="main-container">
@@ -57,15 +57,13 @@
                     <h2 class="info-page">Will you be the next Anagram Master?</h2>
                     <div class="how-to-play">
                         <!-- Opens how to play modal -->
-                        <button class="btn open-how-to-play">
-                            <h3><i class="far fa-question-circle"></i>  How to play</h3>
-                        </button>
+                        <h3><button class="btn open-how-to-play"><i class="far fa-question-circle"></i>  How to play</button></h3>
                     </div>
                 </div>
 
                 <div class="difficulty">
                     <h3>Select Difficulty</h3>
-                    <div class="diff-buttons" required>
+                    <div class="diff-buttons">
                         <button class="btn diff-button" id="normal" data-difficulty="normal">Normal</button>
                         <button class="btn diff-button" id="hard" data-difficulty="hard">Hard</button>
                     </div>
@@ -85,9 +83,7 @@
                 </div>
 
                 <div id="start">
-                    <button class="btn" id="start-button">
-                        <h2>Let's Go!</h2>
-                    </button>
+                    <h2><button class="btn" id="start-button">Let's Go!</button></h2>
                 </div>
             </div>
             <!-- Info screen ends -->
@@ -101,9 +97,7 @@
                         <h3>Time: <span id="time-left"></span></h3>
                     </div>
                     <div class="restart">
-                        <button class="btn"><a href="index.html">
-                                <h3>Restart</h3>
-                            </a></button>
+                        <a href="index.html"><h3 class="btn">Restart</h3></a>
                     </div>
                 </div>
 
@@ -143,7 +137,7 @@
                     <h3>Your highest score is <span id="highest-score"></span></h3>
                 </div>
                 <div class="bottom-container">
-                    <button class="btn"><a href="index.html"><h3>Play Again!</h3></a></button>
+                    <a href="index.html"><h3 class="btn">Play Again!</h3></a>
                 </div>
             </div>
             <!-- Game over ends -->
