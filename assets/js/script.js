@@ -404,7 +404,7 @@ const anagrams = {
         {
             name: "nirvana",
             anagram: "rainvan",
-            hint: "groundbreaking grunge band that revolutionized the music scene"
+            hint: "Groundbreaking grunge band that revolutionized the music scene"
         },
         {
             name: "bruce springsteen",
