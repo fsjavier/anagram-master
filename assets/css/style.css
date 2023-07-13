@@ -35,6 +35,8 @@ h1, h2, h3 {
 
 .background-animals {
     background: url('../images/bg-animals.jpg') no-repeat center;
+    background-color: darkslategray;
+    background-blend-mode: revert;
 }
 
 .background-movies {
@@ -74,6 +76,8 @@ h1 {
 #container h1 {
     margin: 1.5rem 0;
     padding: 0;
+    font-size: 1.6rem;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 h2.info-page {
     text-align: center;
@@ -335,6 +339,10 @@ h2.info-page {
 
     #container {
         width: 70%;
+    }
+
+    #container h1 {
+        font-size: 2.5rem;
     }
 
     .difficulty {
