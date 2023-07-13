@@ -125,10 +125,10 @@ h2.info-page {
   .modal-text {
     width: 90%;
     margin: 1.5rem auto;
+  }
 
-    & p {
-        padding-bottom: .5rem;
-    }
+  .modal-text p {
+    padding-bottom: .5rem;
   }
   
   /* The Close Button */
@@ -314,14 +314,14 @@ h2.info-page {
     height: 50vh;
     justify-content: space-evenly;
     align-items: center;
+}
 
-    & > .middle-container {
-        text-align: center;
+#final-container .middle-container {
+    text-align: center;
+}
 
-        & > h3 {
-            padding: 1rem;
-        }
-    }
+#final-container .middle-container h3 {
+    padding: 1rem;;
 }
 
 /* Media queries */
