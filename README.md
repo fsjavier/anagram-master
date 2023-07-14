@@ -118,7 +118,7 @@ The screens consists of:
 <details><summary>Game Screen</summary>
 <img src="documentation/wireframes/wireframe-game-screen.png">
 </details>
-<details><summary>Game Screen - Hint Modale</summary>
+<details><summary>Game Screen - Hint Modal</summary>
 <img src="documentation/wireframes/wireframe-game-screen-hint.png">
 </details>
 <details><summary>Game Over Screen</summary>
@@ -151,17 +151,65 @@ The screens consists of:
 
 #### HTML
 
+The site passed without errors or warnings through the W3C Markup Validation Service.
+
+<details><summary>HTML test</summary>
+<img src="documentation/tests/test-html.png">
+</details>
+
 #### CSS
+
+No errors were found through the W3C Jigsaw CSS Validation Service.
+
+<details><summary>CSS test</summary>
+<img src="documentation/tests/test-css.png">
+</details>
+
+#### JavaScript
+
+JSHint quality tool has been used to test the code, without finding any significant issues.
+
+<details><summary>JSHint test</summary>
+<img src="documentation/tests/test-JSHint.png">
+</details>
 
 ### Accessibility
  
 #### Lighthouse
+
+Lighthouse from Google Chrome Developer Tools was used to test performance and accessibility.
+
+<details><summary>Lighthouse Test - Desktop</summary>
+<img src="documentation/tests/test-lighthouse-desktop.png">
+</details>
+<details><summary>Lighthouse Test - Mobile</summary>
+<img src="documentation/tests/test-lighthouse-mobile.png">
+</details>
   
 #### Wave WebAIM
+
+The WAVE WebAIM web accessibility tool was used during the development of the website. It has warned me of low contrast between text and some of the background themes, what led me to change their styles.
+
+In the final testing of the website to check there were no accessibility problems.
 
 ### Manual Testing
 
 #### User goals fulfillment
+
+| Goal | Feature | Steps | Expected Outcome | Outcome |
+|------|---------|-------|------------------|---------|
+
+| Know how to play. | "How to play" button. | Click on the "How to play" button. | A modal with the information will be displayed, which can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
+
+| Select a level of difficulty. | Select difficulty. | Click on the "Select difficulty" buttons. | Selecting a button will highlight it to show the user the difficulty chosen.<br><br>Selecting a button deselects the previously selected difficulty button. | Works as expected. |
+
+| Select a theme to play. | Select theme. | Click on the "Select theme" buttons. | Selecting a button will highlight it to show the user the theme chosen.<br><br>Selecting a button deselects the previously selected theme button. | Works as expected. |
+
+| Receive help if I can't find the word | "Hint" button | 1. Select a difficulty level and theme and click "Let's go" to start the game<br><br>2. When the anagram is presented click on "Hint". | Clicking on "Hint" shows a modal with information that will help the user solve the anagram.<br><br>The hint can be shown as many times as the user wants, but only first time the hint is displayed points will be subtracted.<br<br>The modal can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
+
+| Track my score. | Score area | 1. Select a difficulty level and theme and click "Let's go" to start the game<br><br>2. The score is displayed in the bottom right side of the game screen.<br><br>3. After finishing all rounds the final score will be shown. | A correct answer will add 3 points to the user's score.<br><br> Asking for a hint will subtract 1 point or 2 points, depending on the difficulty level, from the user's score. | Works as expected. |
+
+
 
 #### Functional testing
 

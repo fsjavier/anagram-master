@@ -6,19 +6,19 @@ const closeHowToPlayModal = document.getElementById("close-how-to-play");
 // When the user clicks the button, open the modal 
 openHowToPlayModal.addEventListener("click", function() {
     howToPlayModal.style.display = "flex";
-})
+});
 
 // When the user clicks on <span> (x), close the modal
 closeHowToPlayModal.addEventListener("click", function() {
     howToPlayModal.style.display = "none";
-})
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function(event) {
   if (event.target == howToPlayModal) {
     howToPlayModal.style.display = "none";
   }
-})
+});
 
 // Choose difficulty and theme
 let difficulty;
@@ -42,8 +42,6 @@ for (let button of themeButtons) {
         theme = this.getAttribute("data-theme");
     });
 }
-
-
 
 
 // Game Logic
@@ -178,16 +176,14 @@ openHintModal.addEventListener("click", function () {
 closeHintModal.addEventListener("click", function() {
     hintModal.style.display = "none";
     document.getElementById("answer").focus();
-})
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function(event) {
     if (event.target == hintModal) {
         hintModal.style.display = "none";
     }
-  })
-
-
+  });
 
 
 /**
@@ -232,7 +228,7 @@ function assesGameState() {
         document.getElementById("game-container").classList.add("hide");
         document.getElementById("final-container").classList.remove("hide");
         document.getElementById("final-container").classList.add("flex");
-        document.getElementById("outer-container").style.height = "100%"
+        document.getElementById("outer-container").style.height = "100%";
     }
 }
 
