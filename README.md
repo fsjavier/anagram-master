@@ -198,15 +198,10 @@ In the final testing of the website to check there were no accessibility problem
 
 | Goal | Feature | Steps | Expected Outcome | Outcome |
 |------|---------|-------|------------------|---------|
-
 | Know how to play. | "How to play" button. | Click on the "How to play" button. | A modal with the information will be displayed, which can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
-
 | Select a level of difficulty. | Select difficulty. | Click on the "Select difficulty" buttons. | Selecting a button will highlight it to show the user the difficulty chosen.<br><br>Selecting a button deselects the previously selected difficulty button. | Works as expected. |
-
 | Select a theme to play. | Select theme. | Click on the "Select theme" buttons. | Selecting a button will highlight it to show the user the theme chosen.<br><br>Selecting a button deselects the previously selected theme button. | Works as expected. |
-
 | Receive help if I can't find the word | "Hint" button | 1. Select a difficulty level and theme and click "Let's go" to start the game<br><br>2. When the anagram is presented click on "Hint". | Clicking on "Hint" shows a modal with information that will help the user solve the anagram.<br><br>The hint can be shown as many times as the user wants, but only first time the hint is displayed points will be subtracted.<br<br>The modal can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
-
 | Track my score. | Score area | 1. Select a difficulty level and theme and click "Let's go" to start the game<br><br>2. The score is displayed in the bottom right side of the game screen.<br><br>3. After finishing all rounds the final score will be shown. | A correct answer will add 3 points to the user's score.<br><br> Asking for a hint will subtract 1 point or 2 points, depending on the difficulty level, from the user's score. | Works as expected. |
 
 
