@@ -208,6 +208,7 @@ In the final testing of the website to check there were no accessibility problem
 
 #### Functional testing
 
+
 * Start screen
 
 | Situation | Expected Outcome | Outcome |
@@ -218,6 +219,7 @@ In the final testing of the website to check there were no accessibility problem
 | A user clicks on "Let's go" selecting difficulty level but not theme. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
 | A user clicks on "Let's go" selecting theme but not difficulty level. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
 | A user clicks on "Let's go" selecting difficulty level and theme. | The "Start screen" will be hidden and the "Game Screen" will be displayed. | Works as expected. |
+
 
 * Game screen
 
@@ -234,6 +236,7 @@ In the final testing of the website to check there were no accessibility problem
 | Either the user checks an answer or runs out of time in a round. | The next round loads and:<br><br>A new anagram is displayed<br><br>The timer starts again with either 45 seconds or 30, depending on the difficulty level.<br><br>The text with "Round X of 8" is updated with the current round". |
 | A user clicks on "Restart" | The page is reloaded, which resets the game information and the user returns to the the "Start screen". | Works as expected. |
 | A user completes the 8 rounds. | The "Game screen" will be hidden and the "Final screen" is displayed.
+
 
 * Game Over screen
 
