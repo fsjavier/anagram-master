@@ -22,9 +22,8 @@ To enhance the gaming experience players can choose their preferred topic and ch
   3. Select a theme for the anagrams.
   4. Receive help if I can't find the word.
   5. Track my score.
-  6. Navigate easily through the game.
-  7. Be able to end the game / start over.
-  8. Save my highest score to try to improve it next time.
+  6. Be able to end the game / start over.
+  7. Save my highest score to try to improve it next time.
 
 
 ## Features
@@ -201,9 +200,10 @@ In the final testing of the website to check there were no accessibility problem
 | Know how to play. | "How to play" button. | Click on the "How to play" button. | A modal with the information will be displayed, which can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
 | Select a level of difficulty. | Select difficulty. | Click on the "Select difficulty" buttons. | Selecting a button will highlight it to show the user the difficulty chosen.<br><br>Selecting a button deselects the previously selected difficulty button. | Works as expected. |
 | Select a theme to play. | Select theme. | Click on the "Select theme" buttons. | Selecting a button will highlight it to show the user the theme chosen.<br><br>Selecting a button deselects the previously selected theme button. | Works as expected. |
-| Receive help if I can't find the word | "Hint" button | 1. Select a difficulty level and theme and click "Let's go" to start the game<br><br>2. When the anagram is presented click on "Hint". | Clicking on "Hint" shows a modal with information that will help the user solve the anagram.<br><br>The hint can be shown as many times as the user wants, but only first time the hint is displayed points will be subtracted.<br<br>The modal can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
-| Track my score. | Score area | 1. Select a difficulty level and theme and click "Let's go" to start the game<br><br>2. The score is displayed in the bottom right side of the game screen.<br><br>3. After finishing all rounds the final score will be shown. | A correct answer will add 3 points to the user's score.<br><br> Asking for a hint will subtract 1 point or 2 points, depending on the difficulty level, from the user's score. | Works as expected. |
-
+| Receive help if I can't find the word. | "Hint" button. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. When the anagram is presented click on "Hint". | Clicking on "Hint" shows a modal with information that will help the user solve the anagram.<br><br>The hint can be shown as many times as the user wants, but only first time the hint is displayed points will be subtracted.<br<br>The modal can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
+| Track my score. | Score area. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. The score is displayed in the bottom right side of the game screen.<br><br>3. After finishing all rounds the final score will be shown. | A correct answer will add 3 points to the user's score.<br><br> Asking for a hint will subtract 1 point or 2 points, depending on the difficulty level, from the user's score. | Works as expected. |
+| Be able to end the game / Start over. | "Restart" button.<br><br>"Play again!" button". | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>Option 1: Click on "Restart" button in the top right side of the game screen.<br><br>Option 2: After finishing all rounds the final screen will be shown, click on "Play again!". | Clicking either on "Restart" or "Play again" reloads the page and the user can select their preferences again. | Works as expected. |
+| Save my highest score to try to improve it next time. | Highest score saved on local storage. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. Play all rounds.<br><br>3. After finishing all rounds both the final score and the user highest score will be shown. | The first time a user play their score will be saved as their highest score and it will be shown in the final screen.<br><br>Everytime the user beats their previously saved highest score, the current score will be saved as the new highest score. | Works as expected. |
 
 
 #### Functional testing
