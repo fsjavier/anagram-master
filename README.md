@@ -209,6 +209,7 @@ In the final testing of the website to check there were no accessibility problem
 #### Functional testing
 
 * Start screen
+
 | Situation | Expected Outcome | Outcome |
 |-----------|------------------|---------|
 | A user clicks on "How to play". | The "How to play modal is shown". | Works as expected. |
@@ -219,6 +220,7 @@ In the final testing of the website to check there were no accessibility problem
 | A user clicks on "Let's go" selecting difficulty level and theme. | The "Start screen" will be hidden and the "Game Screen" will be displayed. | Works as expected. |
 
 * Game screen
+
 | Situation | Expected Outcome | Outcome |
 |-----------|------------------|---------|
 | A user selects "Normal" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 45 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
@@ -234,6 +236,7 @@ In the final testing of the website to check there were no accessibility problem
 | A user completes the 8 rounds. | The "Game screen" will be hidden and the "Final screen" is displayed.
 
 * Game Over screen
+
 | Situation | Expected Outcome | Outcome |
 |-----------|------------------|---------|
 | A user finish the game for the first time. | The score and the highest score will be displayed. The highest score will be equal to the current score. | Works as expected. |
