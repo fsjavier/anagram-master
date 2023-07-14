@@ -208,6 +208,39 @@ In the final testing of the website to check there were no accessibility problem
 
 #### Functional testing
 
+* Start screen
+| Situation | Expected Outcome | Outcome |
+|-----------|------------------|---------|
+| A user clicks on "How to play". | The "How to play modal is shown". | Works as expected. |
+| A user wants to close the "How to play" modal. | Clicking on the "X" or anywhere outside the box closes the modal. | Works as expected. |
+| A user clicks on "Let's go" without selecting difficulty level and theme. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
+| A user clicks on "Let's go" selecting difficulty level but not theme. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
+| A user clicks on "Let's go" selecting theme but not difficulty level. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
+| A user clicks on "Let's go" selecting difficulty level and theme. | The "Start screen" will be hidden and the "Game Screen" will be displayed. | Works as expected. |
+
+* Game screen
+| Situation | Expected Outcome | Outcome |
+|-----------|------------------|---------|
+| A user selects "Normal" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 45 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
+| A user selects "Hard" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 30 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
+| A user clicks on "Check Answer" or presses "Enter" with an empty input field. | Nothing happens. | Works as expected. |
+| A user clicks on "Check Answer" or presses "Enter" after writing a wrong answer in the input field. | The input field turns red, no points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
+| A user clicks on "Check Answer" or presses "Enter" after writing the correct answer in the input field. | The input field turns green, 3 points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
+| The time for the round is over. | The input field is checked and the same procedure for incorrect/correct answer described above applies. | Works as expected. |
+| A user clicks on "Hint" for the first time in a round. | The modal with helpful information to solve the anagram is displayed and 1 or 2 points will be subtracted from the user's score, depending the current difficulty level. | Works as expected. |
+| A user clicks on "Hint" again after the first time in a round. | The modal with helpful information to solve the anagram is displayed and no points are subtracted. | Works as expected. |
+| Either the user checks an answer or runs out of time in a round. | The next round loads and:<br><br>A new anagram is displayed<br><br>The timer starts again with either 45 seconds or 30, depending on the difficulty level.<br><br>The text with "Round X of 8" is updated with the current round". |
+| A user clicks on "Restart" | The page is reloaded, which resets the game information and the user returns to the the "Start screen". | Works as expected. |
+| A user completes the 8 rounds. | The "Game screen" will be hidden and the "Final screen" is displayed.
+
+* Game Over screen
+| Situation | Expected Outcome | Outcome |
+|-----------|------------------|---------|
+| A user finish the game for the first time. | The score and the highest score will be displayed. The highest score will be equal to the current score. | Works as expected. |
+| A user finish the game after the first time with a lower score than their current highest score. | The current score and the previously achieved highest score will be displayed. | Works as expected. |
+| A user finish the game after the first time with a higher score than their current highest score. | The current score is displayed and the the highest score is updated with the current score. | Works as expected. |
+| A user clicks on "Play Again!". | The page is reloaded, which resets the game information (except the highest score) and the user returns to the the "Start screen". | Works as expected. |
+
 #### Responsiveness
 
 #### Browsers compatibility
