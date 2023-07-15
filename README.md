@@ -4,6 +4,8 @@ Anagram Master is an online game designed to challenge and entertain word game e
 
 To enhance the gaming experience players can choose their preferred topic and challenge themselves selecting the level of difficulty.
 
+[View the live site here](https://fsjavier.github.io/anagram-master/)
+
 ## Table of Contents
 
 * [User Goals](#user-goals)
@@ -282,18 +284,47 @@ Edge
 
 ### Deployment to GitHub Pages
 
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+* In the GitHub repository, navigate to the Settings tab.
+* From the menu on left select 'Pages'.
+* From the source section drop-down menu, select the Branch: main.
+* Click 'Save'.
+* A live link will be displayed in a green banner when published successfully.
+
+The live link can be found here - https://fsjavier.github.io/anagram-master/
+
 ### How to clone the repository
 
+* Go to https://github.com/fsjavier/anagram-master
+* Click on the code drop down button, then click on HTTPS and copy the link to the clipboard.
+* Open a GitBash terminal and navigate to the directory where you want to locate the clone.
+* Type git clone copied-git-url and press the Enter key.
+
+The project will now of been cloned on your local machine for use.
 
 ## Credits
 
 ### Content
 
+Inspiration to create the anagrams from https://www.wordplays.com/anagrammer
 
 ### Code
 
+* Inspiration for the game design from the Love Maths CI Walkthrough project and ["How to make a Quiz App" tutorial from Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY).
+* [How to create a countdown timer](https://www.freecodecamp.org/news/how-to-create-a-countdown-timer/) from freeCodeCamp.
+* [How to save data on local storage](https://www.w3schools.com/jsref/prop_win_localstorage.asp) from W3schools.
+* [How to make a modal](https://www.w3schools.com/howto/howto_css_modals.asp) from W3schools.
+* [How to keep active CSS after click on button](https://www.youtube.com/watch?v=zh1xus05Kl8) from ByteGrad Tips.
 
 ### Media
 
+* bg-main: Photo by [Pete Linforth](https://pixabay.com/users/thedigitalartist-202249/) on [Pixabay](https://pixabay.com/)
+* bg-animals: Photo by [Chakkree Chantakad](https://pixabay.com/users/chakkree_chantakad-15107399/) on [Pixabay](https://pixabay.com/)
+* bg-movies: Photo by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) on [Pixabay](https://pixabay.com/)
+* bg-movies: Photo by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) on [Pixabay](https://pixabay.com/)
+* bg-countries: Photo by [Venita Oberholster](https://pixabay.com/users/artsybeekids-392631/) on [Pixabay](https://pixabay.com/)
 
 ### Acknowledgments
+
+Thank you to my mentor Gareth McGirr for his guidance, feedback and resources provided.
