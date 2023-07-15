@@ -205,7 +205,6 @@ In the final testing of the website to check there were no accessibility problem
 | Be able to end the game / Start over. | "Restart" button.<br><br>"Play again!" button". | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>Option 1: Click on "Restart" button in the top right side of the game screen.<br><br>Option 2: After finishing all rounds the final screen will be shown, click on "Play again!". | Clicking either on "Restart" or "Play again" reloads the page and the user can select their preferences again. | Works as expected. |
 | Save my highest score to try to improve it next time. | Highest score saved on local storage. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. Play all rounds.<br><br>3. After finishing all rounds both the final score and the user highest score will be shown. | The first time a user play their score will be saved as their highest score and it will be shown in the final screen.<br><br>Everytime the user beats their previously saved highest score, the current score will be saved as the new highest score. | Works as expected. |
 
-
 #### Functional testing
 
 
@@ -227,6 +226,11 @@ In the final testing of the website to check there were no accessibility problem
 |-----------|------------------|---------|
 | A user selects "Normal" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 45 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
 | A user selects "Hard" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 30 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
+| A user hovers over any of the buttons. | The button is highlighted. | Works as expected. |
+| A user clicks on one of the difficulty level buttons. | The button is highlighted. | Works as expected. |
+| A user clicks on one of the difficulty level buttons, when the other had been previously selected. | The button clicked is highlighted and the previously selected button is deselected. | Works as expected. |
+| A user clicks on one of the theme buttons. | The button is highlighted. | Works as expected. |
+| A user clicks on one of the theme buttons, when one of the other had been previously selected. | The button clicked is highlighted and the previously selected button is deselected. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" with an empty input field. | Nothing happens. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" after writing a wrong answer in the input field. | The input field turns red, no points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" after writing the correct answer in the input field. | The input field turns green, 3 points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
@@ -245,14 +249,34 @@ In the final testing of the website to check there were no accessibility problem
 | A user finish the game for the first time. | The score and the highest score will be displayed. The highest score will be equal to the current score. | Works as expected. |
 | A user finish the game after the first time with a lower score than their current highest score. | The current score and the previously achieved highest score will be displayed. | Works as expected. |
 | A user finish the game after the first time with a higher score than their current highest score. | The current score is displayed and the the highest score is updated with the current score. | Works as expected. |
-| A user clicks on "Play Again!". | The page is reloaded, which resets the game information (except the highest score) and the user returns to the the "Start screen". | Works as expected. |
+| A user clicks on "Play Again!". | The page is reloaded, what resets the game information (except the highest score) and the user returns to the the "Start screen". | Works as expected. |
 
 #### Responsiveness
 
+All pages have been tested for responsiveness with Google Chrome Developer Tools on screens from 320px, making sure the content adjusts correctly on all screen sizes.
+
+On physical device, it has been tested on iPhone 13 in vertical and horizontal orientation.
+
 #### Browsers compatibility
+
+The website has been tested in the following browsers on desktop, without finding any issues:
+
+Chrome
+Safari
+Firefox
+Opera
+Edge
 
 ### Bugs
 
+| Bug | Solution |
+|-----|----------|
+| On mobile horizontal orientation the top and bottom content were cut off on Start screen. | Replace height property with min-height. |
+| On mobile horizontal orientation the game container was too small and there was not enough space for the text. | Increase game container size. |
+| The buttons with links resulted in style not being applied properly because it was not valid HTML5  | Remove the button element and apply the button class to a different element. |
+| After clicking on the "Hint" button the focus from the input field was gone. | Add focus again to the function that closes the modal. |
+| Clicking repeatedly on "Hint" in a round would subtract points each time from the score. | Add a boolean variable that tracks if the user has already clicked on "Hint" in the current round. |
+| Time counter ran very fast after moving on to the next question. | Add clearInterval() function when setting the next question. |
 
 ## Deployment
 
