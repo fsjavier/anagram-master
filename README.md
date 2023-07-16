@@ -99,6 +99,14 @@ The screens consists of:
 <img src="documentation/readme_images/game-over-screen.png">
 </details>
 
+### Favicon
+
+* A site wide favicon provides an image with the look of the website in the tabs header, allowing users to easily find it among several open tabs.
+
+<details><summary>Favicon</summary>
+<img src="documentation/readme_images/favicon.png">
+</details>
+
 ### Features left to implement
 
 * Add more anagramas for each theme and more themes.
@@ -143,8 +151,8 @@ The screens consists of:
 * [Google Fonts](https://fonts.google.com) was used to import the Montserrat and Poiret One fonts.
 * [Font Awesome](https://fontawesome.com) was used to import the icons.
 * [TinyPNG](https://tinypng.com) was used to compress the images.
-* [Convertio](https://convertio.co) was used to convert the images to webP.
 * [Favicon](https://favicon.io/) to create the favicon files and links.
+* [AutoDraw](https://www.autodraw.com/) to create the favicon logo.
 
 ## Testing
 
@@ -217,6 +225,11 @@ In the final testing of the website to check there were no accessibility problem
 | A user clicks on "How to play". | The "How to play modal is shown". | Works as expected. |
 | A user wants to close the "How to play" modal. | Clicking on the "X" or anywhere outside the box closes the modal. | Works as expected. |
 | A user clicks on "Let's go" without selecting difficulty level and theme. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
+| A user hovers over any of the buttons. | The button is highlighted. | Works as expected. |
+| A user clicks on one of the difficulty level buttons. | The button is highlighted. | Works as expected. |
+| A user clicks on one of the difficulty level buttons, when the other had been previously selected. | The button clicked is highlighted and the previously selected button is deselected. | Works as expected. |
+| A user clicks on one of the theme buttons. | The button is highlighted. | Works as expected. |
+| A user clicks on one of the theme buttons, when one of the other had been previously selected. | The button clicked is highlighted and the previously selected button is deselected. | Works as expected. |
 | A user clicks on "Let's go" selecting difficulty level but not theme. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
 | A user clicks on "Let's go" selecting theme but not difficulty level. | A warning message above the "Let's go" button will be displayed and the game won't start. | Works as expected. |
 | A user clicks on "Let's go" selecting difficulty level and theme. | The "Start screen" will be hidden and the "Game Screen" will be displayed. | Works as expected. |
@@ -226,20 +239,16 @@ In the final testing of the website to check there were no accessibility problem
 
 | Situation | Expected Outcome | Outcome |
 |-----------|------------------|---------|
-| A user selects "Normal" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 45 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
-| A user selects "Hard" difficulty and a theme. | The game screen is displayed and:<br><br>The background for the selected theme is displayed.<br><br>The name of theme is displayed about the anagram.<br><br>The round will be set to "1 of 8".<br><br>The timer with 30 seconds starts.<br><br>The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
+| A user selects "Normal" difficulty and a theme. | The game screen is displayed and:<br><br>1. The background for the selected theme is displayed.<br><br>2. The name of theme is displayed above the anagram.<br><br>3. The round will be set to "1 of 8".<br><br>4. The timer with 45 seconds starts.<br><br>5. The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
+| A user selects "Hard" difficulty and a theme. | The game screen is displayed and:<br><br>1. The background for the selected theme is displayed.<br><br>2. The name of theme is displayed above the anagram.<br><br>3. The round will be set to "1 of 8".<br><br>4. The timer with 30 seconds starts.<br><br>5. The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
 | A user hovers over any of the buttons. | The button is highlighted. | Works as expected. |
-| A user clicks on one of the difficulty level buttons. | The button is highlighted. | Works as expected. |
-| A user clicks on one of the difficulty level buttons, when the other had been previously selected. | The button clicked is highlighted and the previously selected button is deselected. | Works as expected. |
-| A user clicks on one of the theme buttons. | The button is highlighted. | Works as expected. |
-| A user clicks on one of the theme buttons, when one of the other had been previously selected. | The button clicked is highlighted and the previously selected button is deselected. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" with an empty input field. | Nothing happens. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" after writing a wrong answer in the input field. | The input field turns red, no points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" after writing the correct answer in the input field. | The input field turns green, 3 points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
 | The time for the round is over. | The input field is checked and the same procedure for incorrect/correct answer described above applies. | Works as expected. |
 | A user clicks on "Hint" for the first time in a round. | The modal with helpful information to solve the anagram is displayed and 1 or 2 points will be subtracted from the user's score, depending the current difficulty level. | Works as expected. |
 | A user clicks on "Hint" again after the first time in a round. | The modal with helpful information to solve the anagram is displayed and no points are subtracted. | Works as expected. |
-| Either the user checks an answer or runs out of time in a round. | The next round loads and:<br><br>A new anagram is displayed<br><br>The timer starts again with either 45 seconds or 30, depending on the difficulty level.<br><br>The text with "Round X of 8" is updated with the current round". |
+| Either the user checks an answer or runs out of time in a round. | The next round loads and:<br><br>1. A new anagram is displayed<br><br>2. The timer starts again with either 45 seconds or 30, depending on the difficulty level.<br><br>3. The text with "Round X of 8" is updated with the current round". |
 | A user clicks on "Restart" | The page is reloaded, which resets the game information and the user returns to the the "Start screen". | Works as expected. |
 | A user completes the 8 rounds. | The "Game screen" will be hidden and the "Final screen" is displayed.
 
@@ -263,11 +272,11 @@ On physical device, it has been tested on iPhone 13 in vertical and horizontal o
 
 The website has been tested in the following browsers on desktop, without finding any issues:
 
-Chrome
-Safari
-Firefox
-Opera
-Edge
+* Chrome
+* Safari
+* Firefox
+* Opera
+* Edge
 
 ### Bugs
 
