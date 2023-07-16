@@ -6,6 +6,8 @@ To enhance the gaming experience players can choose their preferred topic and ch
 
 [View the live site here](https://fsjavier.github.io/anagram-master/)
 
+![Mockup](documentation/readme_images/mockup.png)
+
 ## Table of Contents
 
 * [User Goals](#user-goals)
