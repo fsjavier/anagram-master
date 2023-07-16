@@ -331,6 +331,16 @@ h2.info-page {
     padding: 1rem;;
 }
 
+/* 404 page*/
+
+#bg-404 {
+    background: url('../images/bg-404') no-repeat center center;
+    background-size: cover;
+    height: 88vh;
+    background-color: rgba(165, 138, 3, 0.8);
+    background-blend-mode: saturation;
+}
+
 /* Media queries */
 
 /* tablet size */
