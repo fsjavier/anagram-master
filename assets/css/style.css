@@ -334,19 +334,24 @@ h2.info-page {
 /* 404 page*/
 
 #bg-404 {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url('../images/bg-404.jpg') no-repeat center center;
     background-size: cover;
-    background-color: rgba(165, 138, 3, 0.8);
-    background-blend-mode: saturation;
+    background-color: darkgray;
+    background-blend-mode: soft-light;
+    font-size: 1.5rem;
 }
 
-bg-404>* {
+#bg-404>* {
     padding: 1rem;
+}
+
+#bg-404>h2 {
+    color: black;
 }
 
 /* Media queries */
