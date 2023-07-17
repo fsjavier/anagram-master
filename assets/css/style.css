@@ -204,6 +204,7 @@ h2.info-page {
 }
 
 .btn {
+    background-color: darkblue; /*fallback color*/
     background: radial-gradient(circle, rgba(2, 0, 36, 1) 25%, rgba(9, 65, 121, 0.9122023809523809) 90%, rgba(0, 212, 255, 1) 125%);
     font-weight: 700;
     font-size: 1rem;
