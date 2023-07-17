@@ -134,9 +134,19 @@ h2.info-page {
     margin: 1.5rem auto;
   }
 
-  .modal-text p {
-    padding-bottom: .5rem;
-  }
+.modal-text ul {
+    padding: 0 .5rem;
+}
+
+.modal-text li {
+    padding: .3rem;
+}
+
+.modal-text h3 {
+    color: black;
+    text-align: center;
+    padding-bottom: .3rem;
+}
   
   /* The Close Button */
   .close-modal {
