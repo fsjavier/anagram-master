@@ -1,7 +1,7 @@
-/* import google fonts */
+/* Import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Electrolize&display=swap');
 
-/* general rules */
+/* General rules */
 * {
     margin: 0;
     padding: 0;
@@ -28,14 +28,14 @@ h1, h2, h3 {
     color: white;
 }
 
-/* index.html */
-
+/* Backgrounds */
 .background-info {
     background: url('../images/bg-main.jpg') no-repeat center;
     background-color: darkslategray;
     background-blend-mode: luminosity;
 }
 
+/* Backgrounds for game depending on the theme */
 .background-animals {
     background: url('../images/bg-animals.jpg') no-repeat center;
     background-color: darkslategray;
@@ -60,6 +60,7 @@ h1, h2, h3 {
     background-blend-mode: difference;
 }
 
+/* #outer-container and #container are used in the 3 views (Start, Game, Game Over) */
 #outer-container {
     display: flex;
     justify-content: center;
@@ -82,11 +83,14 @@ h1 {
     font-size: 1.6rem;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+/* Start screen */
 h2.info-page {
     text-align: center;
     padding-bottom: 1rem;
 }
 
+/* .main-container used in the 3 views (Start, Game, Game Over) */
 .main-container {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
@@ -96,11 +100,10 @@ h2.info-page {
 }
 
 .how-to-play {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
+/* Code for modal adapted from https://www.w3schools.com/howto/howto_css_modals.asp */
 .modal {
     display: none;
     position: fixed;
@@ -113,8 +116,8 @@ h2.info-page {
     background-color: rgba(0,0,0,0.4);
   }
 
-  /* Modal Content/Box */
-  .modal-content {
+/* Modal Content/Box */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     border: 1px solid #888;
@@ -124,15 +127,15 @@ h2.info-page {
     animation-duration: 0.6s
   }
 
-  @keyframes animatefadein {
+@keyframes animatefadein {
     from {opacity: 0}
     to {opacity: 1}
-  }
+}
 
-  .modal-text {
+.modal-text {
     width: 90%;
     margin: 1.5rem auto;
-  }
+}
 
 .modal-text ul {
     padding: 0 .5rem;
@@ -148,23 +151,23 @@ h2.info-page {
     padding-bottom: .3rem;
 }
   
-  /* The Close Button */
-  .close-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    padding-right: .8rem;
-  }
+/* The Close Button */
+.close-modal {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+padding-right: .8rem;
+}
   
-  .close-modal:hover,
-  .close-modal:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.close-modal:hover,
+.close-modal:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
 
-
+/* Select difficulty and theme */
 .difficulty {
     display: flex;
     flex-direction: column;
@@ -189,7 +192,7 @@ h2.info-page {
     width: 100%;
 }
 
-/* to be targeted with JS when user clicks*/
+/* To be targeted with JS when user clicks*/
 .selected-btn-diff,
 .selected-btn-theme {
     background: radial-gradient(circle, rgba(2, 0, 36, 1) 60%, rgba(9, 65, 121, 0.9122023809523809) 95%, rgba(0, 212, 255, 1) 150%);
@@ -213,6 +216,7 @@ h2.info-page {
     text-align: center;
 }
 
+/* Class applied to all buttons */
 .btn {
     background-color: darkblue; /*fallback color*/
     background: radial-gradient(circle, rgba(2, 0, 36, 1) 25%, rgba(9, 65, 121, 0.9122023809523809) 90%, rgba(0, 212, 255, 1) 125%);
@@ -254,8 +258,8 @@ h2.info-page {
     padding: .5rem 0;
 }
 
-
-/* game */
+/* Game */
+/* .hide and .flex classes will be targeted with JS */
 .hide {
     display: none;
 }
@@ -316,7 +320,7 @@ h2.info-page {
     font-size: 1rem;
 }
 
-/* Change game background to show that the answer was correct / incorrect */
+/* Change input field background to show that the answer was correct or incorrect. To be targeted with JS */
 .correct {
     background-color: green;
 }
@@ -325,7 +329,7 @@ h2.info-page {
     background-color: red;
 }
 
-/* final screen */
+/* Game Over screen */
 
 #final-container {
     flex-direction: column;
@@ -343,7 +347,6 @@ h2.info-page {
 }
 
 /* 404 page*/
-
 #bg-404 {
     height: 100vh;
     display: flex;
@@ -371,8 +374,7 @@ h2.info-page {
 }
 
 /* Media queries */
-
-/* tablet size */
+/* Tablet size */
 @media screen and (min-width: 750px) {
     #outer-container {
         width: 100%;
