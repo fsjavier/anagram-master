@@ -342,16 +342,18 @@ h2.info-page {
     background: url('../images/bg-404.jpg') no-repeat center center;
     background-size: cover;
     background-color: darkgray;
-    background-blend-mode: soft-light;
-    font-size: 1.5rem;
+    background-blend-mode: screen;
+    font-size: 2rem;
+    text-align: center;
 }
 
-#bg-404>* {
-    padding: 1rem;
+#bg-404>p {
+    padding: 1.5rem;
 }
 
 #bg-404>h2 {
     color: black;
+    padding: 1.5rem
 }
 
 /* Media queries */
