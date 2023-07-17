@@ -124,10 +124,14 @@ function startTimer(difficulty) {
     interval = setInterval(function () {
         document.getElementById("time-left").innerText = `${counter}s`;
         counter--;
-
-        if (counter < 0) {
-            clearInterval(interval);
+        // change counter color to red to visually indicate users they are running out of time.
+        if (counter < 5 && counter > 0) {
+            document.getElementById("time-left").style.color = "red"
+        }
+        else if (counter < 0) {
+            // if users run out of time check answer and set counter's color back to white.
             checkAnswer();
+            document.getElementById("time-left").style.color = "white"
         }
     }, 1000);
 
@@ -137,20 +141,22 @@ function startTimer(difficulty) {
  * Assign the inner text of the html anagram element to the selected question.
  */
 function setNextQuestion() {
+    // Remove data from previous question
     document.getElementById("answer-container").classList.remove("correct");
     document.getElementById("answer-container").classList.remove("incorrect");
-    clearInterval(interval);
     askedForHint = false;
+    // Update content
     roundElement.innerText = currentRound;
     scoreElement.innerText = userScore;
     themeChosenElement.innerText = theme;
     questionElement.innerText = questionsArray[questionsCurrentIndex].anagram;
     startTimer(difficulty);
+    // Give focus to input field
     document.getElementById("answer").focus();
 }
 
 
-// Script to open and close "hint" modal
+// Open and close "hint" modal
 const hinText = document.getElementById("hint-text");
 const hintModal = document.getElementById("hint-modal");
 const openHintModal = document.getElementsByClassName("open-hint")[0];
@@ -189,19 +195,17 @@ window.addEventListener("click", function(event) {
 /**
  * Checks if the answer is correct.
  * If it's correct increases the score.
- * After checking, calls the function to asses the state of the game
+ * After checking, calls the function to asses the state of the game.
  */
 function checkAnswer() {
+    clearInterval(interval);
     let userAnswer = document.getElementById("answer").value.toLowerCase();
     if (userAnswer === questionsArray[questionsCurrentIndex].name) {
-        // alert("Correct!");
         document.getElementById("answer-container").classList.add("correct");
         userScore += 3;
         scoreElement.innerText = userScore;
     } else {
         document.getElementById("answer-container").classList.add("incorrect");
-
-        // alert(`Your answer ${userAnswer} is not correct. The correct answer is ${questionsArray[questionsCurrentIndex].name}`);
     }
     document.getElementsByTagName("input")[0].setAttribute("disabled", true);
     assesGameState();
@@ -209,32 +213,31 @@ function checkAnswer() {
 
 /**
  * Increases the question index by 1 and checks if has reached the last question.
- * If it hasn't reached the end it sets the next question after a short delay.
+ * If it hasn't reached the end it sets the next question after 2 seconds.
  */
 function assesGameState() {
     questionsCurrentIndex++;
     if (questionsCurrentIndex <= (numberOfRounds - 1)) {
-        // setTimeout(setNextQuestion, 2000);
         setTimeout(function () {
             document.getElementsByTagName("input")[0].removeAttribute("disabled");
             document.getElementById("answer").value = "";
+            document.getElementById("time-left").style.color = "white"
             setNextQuestion();
         }, 2000);
         currentRound++;
     } else {
-        // alert("Game over");
-        updateHighestScore();
-        finalScoreElement.innerText = userScore;
-        document.getElementById("game-container").classList.add("hide");
-        document.getElementById("final-container").classList.remove("hide");
-        document.getElementById("final-container").classList.add("flex");
-        document.getElementById("outer-container").style.height = "100%";
+        setTimeout(function () {
+            updateHighestScore();
+            finalScoreElement.innerText = userScore;
+            document.getElementById("game-container").classList.add("hide");
+            document.getElementById("final-container").classList.remove("hide");
+            document.getElementById("final-container").classList.add("flex");
+            document.getElementById("outer-container").style.height = "100%";
+        }, 2000)
     }
 }
 
-/* Checks the answer from the user either clicking on Check Answer
-   or pressing Enter as long as the field is not empty.
-*/
+// Checks the answer from the user clicking on Check Answer if the field is not empty.
 checkAnswerBtn.addEventListener("click", function() {
     if (document.getElementById("answer").value.length !== 0) {
         checkAnswer();
@@ -243,6 +246,7 @@ checkAnswerBtn.addEventListener("click", function() {
     }
 });
 
+// Checks the answer from the user either pressing Enter if the field is not empty.
 document.getElementById("answer").addEventListener("keydown", function (event) {
     if (event.key === "Enter" && this.value.length !== 0) {
         checkAnswer();
@@ -251,12 +255,14 @@ document.getElementById("answer").addEventListener("keydown", function (event) {
     }
 });
 
-// Check final score and set highest score
+// Check final score and set highest score.
 function updateHighestScore() {
     if(userScore > localStorage.getItem(highestScore)) {
+        // If the user's score is higher than the highest score, set the highest score in localStorage.
         localStorage.setItem(highestScore, userScore);
         highestScoreElement.innerText = localStorage.getItem(highestScore);
     } else {
+        // If it's not higher get the highest score from localStorage.
         highestScoreElement.innerHTML = localStorage.getItem(highestScore);
     }
 }
