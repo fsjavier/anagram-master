@@ -55,7 +55,9 @@ The screens consists of:
 The screens consists of:
 * A background image matching the theme selected by the user.
 * Header with game name and logo.
-* Time remaining for each anagram. The time will be different depending on the difficulty level chosen.
+* Time remaining for each anagram.
+    * The time will be different depending on the difficulty level chosen.
+    * The last 5 seconds the counter will turn red to alert users visually.
 * Restart button: Returns to "Start screen" and the game progress will be lost.
 * The theme chosen is displayed as a reminder.
 * The current anagram to solve. The anagrams will be displayed randomly to avoid showing always the same in the same order.
@@ -256,6 +258,7 @@ In the final testing of the website to check there were no accessibility problem
 | A user clicks on "Check Answer" or presses "Enter" with an empty input field. | Nothing happens. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" after writing a wrong answer in the input field. | The input field turns red, no points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" after writing the correct answer in the input field. | The input field turns green, 3 points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
+| A user enters the last 5 seconds of the round. | The countdown timer turns red during the last 5 seconds. When the user moves to the next round the timer is white again. | Works as expected. |
 | The time for the round is over. | The input field is checked and the same procedure for incorrect/correct answer described above applies. | Works as expected. |
 | A user clicks on "Hint" for the first time in a round. | The modal with helpful information to solve the anagram is displayed and 1 or 2 points will be subtracted from the user's score, depending the current difficulty level. | Works as expected. |
 | A user clicks on "Hint" again after the first time in a round. | The modal with helpful information to solve the anagram is displayed and no points are subtracted. | Works as expected. |
@@ -298,7 +301,8 @@ The website has been tested in the following browsers on desktop, without findin
 | The buttons with links resulted in style not being applied properly because it was not valid HTML5  | Remove the button element and apply the button class to a different element. |
 | After clicking on the "Hint" button the focus from the input field was gone. | Add focus again to the function that closes the modal. |
 | Clicking repeatedly on "Hint" in a round would subtract points each time from the score. | Add a boolean variable that tracks if the user has already clicked on "Hint" in the current round. |
-| Time counter ran very fast after moving on to the next question. | Add clearInterval() function when setting the next question. |
+| After the user answered the countdown timer continues running for a couple of seconds. | Move clearInterval() function from setNextQuestion() to checkAnswer(). |
+| After the last round the game moved too fast to the final screen, without having time even to see if the answer was correct or incorrect. | Add the same setTimeOut() function that is place for the rounds where the game continues after answer. |
 
 ## Deployment
 
