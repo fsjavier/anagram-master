@@ -101,6 +101,15 @@ The screens consists of:
 <img src="documentation/readme_images/game-over-screen.png">
 </details>
 
+### 404 page
+
+* A custom 404 page will be displayed if the users tries to navigate to a page that can't be loaded.
+* It maintains the look and feel of the website and provides users with the ability to navigate back through links.
+
+<details><summary>404 page</summary>
+<img src="documentation/readme_images/404-page.png">
+</details>
+
 ### Favicon
 
 * A site wide favicon provides an image with the look of the website in the tabs header, allowing users to easily find it among several open tabs.
@@ -330,11 +339,12 @@ Inspiration to create the anagrams from https://www.wordplays.com/anagrammer
 
 ### Media
 
-* bg-main: Photo by [Pete Linforth](https://pixabay.com/users/thedigitalartist-202249/) on [Pixabay](https://pixabay.com/)
-* bg-animals: Photo by [Chakkree Chantakad](https://pixabay.com/users/chakkree_chantakad-15107399/) on [Pixabay](https://pixabay.com/)
-* bg-movies: Photo by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) on [Pixabay](https://pixabay.com/)
-* bg-movies: Photo by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) on [Pixabay](https://pixabay.com/)
-* bg-countries: Photo by [Venita Oberholster](https://pixabay.com/users/artsybeekids-392631/) on [Pixabay](https://pixabay.com/)
+* bg-main: Image by [Pete Linforth](https://pixabay.com/users/thedigitalartist-202249/) from [Pixabay](https://pixabay.com/)
+* bg-animals: Image by [Chakkree Chantakad](https://pixabay.com/users/chakkree_chantakad-15107399/) from [Pixabay](https://pixabay.com/)
+* bg-movies: Image by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com/)
+* bg-movies: Image by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com/)
+* bg-countries: Image by [Venita Oberholster](https://pixabay.com/users/artsybeekids-392631/) from [Pixabay](https://pixabay.com/)
+* bg-404: Image by [Chen](https://pixabay.com/users/chenspec-7784448/) from [Pixabay](https://pixabay.com/)
 
 ### Acknowledgments
 
