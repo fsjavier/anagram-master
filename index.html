@@ -56,23 +56,23 @@
             <!-- Info screen starts-->
             <div id="info-container" class="main-container">
                 <div class="game-info">
-                    <h2 class="info-page">Will you be the next Anagram Master?</h2>
-                    <div class="how-to-play">
+                    <h2 id="info-page">Will you be the next Anagram Master?</h2>
+                    <div id="how-to-play">
                         <!-- Opens how to play modal -->
                         <h3><button class="btn open-how-to-play" aria-label="Open how to play instructions"><i class="far fa-question-circle"></i>  How to play</button></h3>
                     </div>
                 </div>
 
-                <div class="difficulty">
+                <div id="difficulty">
                     <h3>Select Difficulty</h3>
-                    <div class="diff-buttons">
+                    <div id="diff-buttons">
                         <button class="btn diff-button" id="normal" data-difficulty="normal" aria-label="Normal difficulty">Normal</button>
                         <button class="btn diff-button" id="hard" data-difficulty="hard" aria-label="Hard difficulty">Hard</button>
                     </div>
                 </div>
-                <div class="theme">
+                <div id="theme">
                     <h3>Select Theme</h3>
-                    <div class="theme-buttons">
+                    <div id="theme-buttons">
                         <button class="btn theme-button" data-theme="animals" aria-label="Animals theme">Animals</button>
                         <button class="btn theme-button" data-theme="movies" aria-label="Movies theme">Movies</button>
                         <button class="btn theme-button" data-theme="music" aria-label="Music theme">Music Artists</button>
@@ -94,10 +94,10 @@
             <div id="game-container" class="main-container hide">
 
                 <div id="top-container">
-                    <div class="time">
+                    <div>
                         <h3>Time: <span id="time-left"></span></h3>
                     </div>
-                    <div class="restart">
+                    <div>
                         <a href="index.html" aria-label="Restart the game"><h3 class="btn">Restart</h3></a>
                     </div>
                 </div>
@@ -127,14 +127,14 @@
 
             <!-- Game over starts -->
             <div id="final-container" class="main-container hide">
-                <div class="top-container">
+                <div>
                     <h2>Game Over</h2>
                 </div>
-                <div class="middle-container">
+                <div id="middle-container">
                     <h3>Your score is <span id="final-score"></span></h3>
                     <h3>Your highest score is <span id="highest-score"></span></h3>
                 </div>
-                <div class="bottom-container">
+                <div>
                     <a href="index.html" aria-label="Play again"><h3 class="btn">Play Again!</h3></a>
                 </div>
             </div>

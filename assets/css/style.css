@@ -85,7 +85,7 @@ h1 {
 }
 
 /* Start screen */
-h2.info-page {
+#info-page {
     text-align: center;
     padding-bottom: 1rem;
 }
@@ -99,7 +99,7 @@ h2.info-page {
     padding: 1rem;
 }
 
-.how-to-play {
+#how-to-play {
     text-align: center;
 }
 
@@ -168,7 +168,7 @@ cursor: pointer;
 }
 
 /* Select difficulty and theme */
-.difficulty {
+#difficulty {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,15 +176,15 @@ cursor: pointer;
     margin: 1rem 0;
 }
 
-.difficulty h3,
-.theme h3 {
+#difficulty h3,
+#theme h3 {
     text-transform: uppercase;
     letter-spacing: .2rem;
     text-align: center;
     padding: .5rem 0; 
 }
 
-.diff-buttons {
+#diff-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: .5rem;
@@ -201,7 +201,7 @@ cursor: pointer;
     box-shadow: 0 0 1px 1px;
 }
 
-.theme {
+#theme {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -209,7 +209,7 @@ cursor: pointer;
     margin: 1rem 0;
 }
 
-.theme-buttons {
+#theme-buttons {
     display: grid;
     gap: .5rem;
     width: 100%;
@@ -338,11 +338,11 @@ cursor: pointer;
     align-items: center;
 }
 
-#final-container .middle-container {
+#final-container #middle-container {
     text-align: center;
 }
 
-#final-container .middle-container h3 {
+#final-container #middle-container h3 {
     padding: 1rem;;
 }
 
@@ -389,27 +389,27 @@ cursor: pointer;
         font-size: 2.5rem;
     }
 
-    .difficulty {
+    #difficulty {
         flex-direction: row;
     }
 
-    .difficulty h3 {
+    #difficulty h3 {
         width: 40%;
     }
 
-    .diff-buttons {
+    #diff-buttons {
         width: 60%;
     }
 
-    .theme {
+    #theme {
         flex-direction: row;
     }
 
-    .theme h3 {
+    #theme h3 {
         width: 40%;
     }
 
-    .theme-buttons {
+    #theme-buttons {
         width: 60%;
         grid-template-columns: repeat(2, 1fr);
     }
