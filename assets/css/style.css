@@ -347,13 +347,16 @@ h2.info-page {
     text-align: center;
 }
 
-#bg-404>p {
+#bg-404>* {
     padding: 1.5rem;
 }
 
 #bg-404>h2 {
     color: black;
-    padding: 1.5rem
+}
+
+#bg-404>a {
+    font-size: 2rem;
 }
 
 /* Media queries */
