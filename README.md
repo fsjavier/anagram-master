@@ -32,7 +32,9 @@ To enhance the gaming experience players can choose their preferred topic and ch
 
 ## Features
 
-The website has been developed in one html file containing 3 main interactive sections, the user will see one of them at a time as they advance through the game: start, game and game over.
+The website has been developed in one html file containing 3 main interactive views, the user will see one of them at a time as they advance through the game: start, game and game over.
+
+A custom 404 page has been added as well.
 
 ### Start screen
 
@@ -166,6 +168,7 @@ The screens consists of:
 * [TinyPNG](https://tinypng.com) was used to compress the images.
 * [Favicon](https://favicon.io/) to create the favicon files and links.
 * [AutoDraw](https://www.autodraw.com/) to create the favicon logo.
+* [CSS Gradient](https://cssgradient.io) to create the gradients.
 
 ## Testing
 
@@ -189,10 +192,15 @@ No errors were found through the W3C Jigsaw CSS Validation Service.
 
 #### JavaScript
 
-JSHint quality tool has been used to test the code, without finding any significant issues.
+JSHint quality tool has been used to test the code, without finding any significant problems. 
 
-<details><summary>JSHint test</summary>
-<img src="documentation/tests/test-JSHint.png">
+There are four warnings related to how CSS stlye is kept active only on one button after clicking. This logic was taken from the tutorial mentioned in the [Credits](#credits) section and after testing it on several browsers I didn't find it caused any issues.
+
+<details><summary>JSHint test - script.js</summary>
+<img src="documentation/tests/test-JSHint-script.js.png">
+</details>
+<details><summary>JSHint test - anagrams.js</summary>
+<img src="documentation/tests/test-JSHint-script.js.png">
 </details>
 
 ### Accessibility
@@ -212,7 +220,7 @@ Lighthouse from Google Chrome Developer Tools was used to test performance and a
 
 The WAVE WebAIM web accessibility tool was used during the development of the website. It has warned me of low contrast between text and some of the background themes, what led me to change their styles.
 
-In the final testing of the website to check there were no accessibility problems.
+In the final testing of the website there were no accessibility problems.
 
 ### Manual Testing
 
@@ -332,6 +340,7 @@ The project will now of been cloned on your local machine for use.
 ### Content
 
 Inspiration to create the anagrams from https://www.wordplays.com/anagrammer
+Information for the hints from Wikipedia and ChatGPT.
 
 ### Code
 
