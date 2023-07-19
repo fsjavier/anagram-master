@@ -209,11 +209,22 @@ There are four warnings related to how CSS stlye is kept active only on one butt
 
 Lighthouse from Google Chrome Developer Tools was used to test performance and accessibility.
 
+* Home page
+
 <details><summary>Lighthouse Test - Desktop</summary>
 <img src="documentation/tests/test-lighthouse-desktop.png">
 </details>
 <details><summary>Lighthouse Test - Mobile</summary>
 <img src="documentation/tests/test-lighthouse-mobile.png">
+</details>
+
+* 404 page
+
+<details><summary>Lighthouse Test - 404 Desktop</summary>
+<img src="documentation/tests/test-lighthouse-404-desktop.png">
+</details>
+<details><summary>Lighthouse Test - 404 Mobile</summary>
+<img src="documentation/tests/test-lighthouse-404-mobile.png">
 </details>
   
 #### Wave WebAIM
