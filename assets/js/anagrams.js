@@ -80,7 +80,7 @@ const anagrams = {
         },
         {
             name: "star wars",
-            anagram: "raw arts",
+            anagram: "raws arts",
             hint: "The most famous battle between the light and dark sides"
         },
         {
