@@ -185,8 +185,11 @@ The intention is to give the game a techy and playful style through the fonts. T
 
 The site passed without errors or warnings through the W3C Markup Validation Service.
 
-<details><summary>HTML test</summary>
+<details><summary>HTML test - Home</summary>
 <img src="documentation/tests/test-html.png">
+</details>
+<details><summary>HTML test - 404</summary>
+<img src="documentation/tests/test-html-404.png">
 </details>
 
 #### CSS
