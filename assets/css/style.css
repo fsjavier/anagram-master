@@ -347,10 +347,11 @@ cursor: pointer;
 
 /* 404 page*/
 #bg-404 {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background: url('../images/bg-404.jpg') no-repeat center center;
     background-size: cover;
     background-color: darkgray;
@@ -363,7 +364,7 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: 1.5rem;
+    margin: 2.5rem;
 }
 
 #container-404>* {
@@ -430,6 +431,17 @@ cursor: pointer;
     .modal-text {
         width: 95%;
     }
+}
+
+/* laptop size */
+@media screen and (min-width: 1200px) {
+    #container {
+        width: 50%;
+    }
+
+    .modal-content {
+        width: 50%;
+    }
 
     #container-404 {
         font-size: 2rem;
@@ -441,16 +453,5 @@ cursor: pointer;
 
     #container-404>a {
         font-size: 1.5rem;
-    }
-}
-
-/* laptop size */
-@media screen and (min-width: 1200px) {
-    #container {
-        width: 50%;
-    }
-
-    .modal-content {
-        width: 50%;
     }
 }
