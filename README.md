@@ -293,6 +293,8 @@ In the final testing of the website there were no accessibility problems.
 | A user finish the game for the first time. | The score and the highest score will be displayed. The highest score will be equal to the current score. | Works as expected. |
 | A user finish the game after the first time with a lower score than their current highest score. | The current score and the previously achieved highest score will be displayed. | Works as expected. |
 | A user finish the game after the first time with a higher score than their current highest score. | The current score is displayed and the the highest score is updated with the current score. | Works as expected. |
+| A user misses at least one correct anwer during the game. | The message "Game Over" is displayed. | Works as expected. |
+| A user answers correctly all rounds. | The message "You are a Pro!" is displayed. | Works as expected. |
 | A user clicks on "Play Again!". | The page is reloaded, what resets the game information (except the highest score) and the user returns to the the "Start screen". | Works as expected. |
 
 #### Responsiveness

@@ -89,6 +89,7 @@ let userScore = 0;
 let finalScoreElement = document.getElementById("final-score");
 let highestScoreElement = document.getElementById("highest-score");
 let highestScore = 0;
+let finalMessageElement = document.getElementById("final-message");
 
 
 /**
@@ -230,6 +231,9 @@ function assesGameState() {
             document.getElementById("final-container").classList.remove("hide");
             document.getElementById("final-container").classList.add("flex");
             document.getElementById("outer-container").style.height = "100%";
+            if (userScore === 24) {
+                finalMessageElement.innerText = "You are a Pro!"
+            }
         }, 2000);
     }
 }
