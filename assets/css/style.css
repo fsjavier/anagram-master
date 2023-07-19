@@ -349,15 +349,12 @@ cursor: pointer;
 #bg-404 {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url('../images/bg-404.jpg') no-repeat center center;
     background-size: cover;
     background-color: darkgray;
     background-blend-mode: screen;
-    font-size: 2rem;
-    text-align: center;
 }
 
 #container-404 {
@@ -365,19 +362,10 @@ cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
 }
 
 #container-404>* {
-    padding: 1.5rem;
-}
-
-#container-404>h2 {
-    color: black;
-}
-
-#container-404>a {
-    font-size: 2rem;
+    padding: 1rem;
 }
 
 /* Media queries */
@@ -439,6 +427,18 @@ cursor: pointer;
 
     .modal-text {
         width: 95%;
+    }
+
+    #container-404 {
+        font-size: 2rem;
+    }
+
+    #container-404>* {
+        padding: 1.5rem;
+    }
+
+    #container-404>a {
+        font-size: 1.5rem;
     }
 }
 
