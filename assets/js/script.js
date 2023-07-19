@@ -33,7 +33,6 @@ for (let button of difficultyButtons) {
     });
 }
 
-
 let themeButtons = document.getElementsByClassName("theme-button");
 for (let button of themeButtons) {
     button.addEventListener("click", function () {
@@ -43,15 +42,11 @@ for (let button of themeButtons) {
     });
 }
 
-
 // Game Logic
-
 // Starting the game
-const startButton = document.getElementById("start-button");
-const gameContainer = document.getElementById("game-container");
-let anagram = document.getElementById("anagram");
+const startButtonElement = document.getElementById("start-button");
 
-startButton.addEventListener("click", function () {
+startButtonElement.addEventListener("click", function () {
     startGame();
     setNextQuestion();
 });
@@ -60,7 +55,7 @@ function startGame() {
     // Prevent the game from starting if a difficulty level and theme have not been selected
     if (!difficulty || !theme) {
         document.getElementById("start-requirement").classList.remove("hide");
-        throw("Missing difficulty or theme")
+        throw("Missing difficulty or theme");
     }
 
     // Hide info and display questions applying style
@@ -81,7 +76,7 @@ const timeHardDifficulty = 20;
 const timeNormalDifficulty = 45;
 let counter;
 let interval;
-const checkAnswerBtn = document.getElementById("check-answer");
+const checkAnswerBtnElement = document.getElementById("check-answer");
 let questionsArray;
 let themeChosenElement = document.getElementById("theme-chosen");
 let questionElement = document.getElementById("anagram");
@@ -103,11 +98,11 @@ let highestScore = 0;
  * @param {*} theme 
  */
 function setQuestions(theme) {
-    questionsArray = anagrams[theme].sort(() => Math.random() - .5);
+    questionsArray = anagrams[theme].sort(() => Math.random() - 0.5);
 }
 
 /**
- * Starts the timer depending on the difficulty chose by the user.
+ * Starts the timer depending on the difficulty chosen by the user.
  * If the user runs out of time the checkAnswer function is called.
  * @param {*} difficulty 
  */
@@ -126,12 +121,12 @@ function startTimer(difficulty) {
         counter--;
         // change counter color to red to visually indicate users they are running out of time.
         if (counter < 5 && counter > 0) {
-            document.getElementById("time-left").style.color = "red"
+            document.getElementById("time-left").style.color = "red";
         }
         else if (counter < 0) {
             // if users run out of time check answer and set counter's color back to white.
             checkAnswer();
-            document.getElementById("time-left").style.color = "white"
+            document.getElementById("time-left").style.color = "white";
         }
     }, 1000);
 
@@ -141,7 +136,7 @@ function startTimer(difficulty) {
  * Assign the inner text of the html anagram element to the selected question.
  */
 function setNextQuestion() {
-    // Remove data from previous question
+    // Reset data from previous question
     document.getElementById("answer-container").classList.remove("correct");
     document.getElementById("answer-container").classList.remove("incorrect");
     askedForHint = false;
@@ -155,9 +150,8 @@ function setNextQuestion() {
     document.getElementById("answer").focus();
 }
 
-
 // Open and close "hint" modal
-const hinText = document.getElementById("hint-text");
+const hintText = document.getElementById("hint-text");
 const hintModal = document.getElementById("hint-modal");
 const openHintModal = document.getElementsByClassName("open-hint")[0];
 const closeHintModal = document.getElementById("close-hint");
@@ -165,7 +159,7 @@ const closeHintModal = document.getElementById("close-hint");
 // When the user clicks the button, open the modal 
 openHintModal.addEventListener("click", function () {
     hintModal.style.display = "flex";
-    hinText.innerHTML = questionsArray[questionsCurrentIndex].hint;
+    hintText.innerHTML = questionsArray[questionsCurrentIndex].hint;
     // Points from score will be subtracted only once per round
     if (!askedForHint) {
         askedForHint = true;
@@ -207,6 +201,7 @@ function checkAnswer() {
     } else {
         document.getElementById("answer-container").classList.add("incorrect");
     }
+    // disable input field once the answer is submitted
     document.getElementsByTagName("input")[0].setAttribute("disabled", true);
     assesGameState();
 }
@@ -218,27 +213,29 @@ function checkAnswer() {
 function assesGameState() {
     questionsCurrentIndex++;
     if (questionsCurrentIndex <= (numberOfRounds - 1)) {
+        // If the game hasn't reached the end clear the data from previous question and load next question.
         setTimeout(function () {
             document.getElementsByTagName("input")[0].removeAttribute("disabled");
             document.getElementById("answer").value = "";
-            document.getElementById("time-left").style.color = "white"
+            document.getElementById("time-left").style.color = "white";
             setNextQuestion();
         }, 2000);
         currentRound++;
     } else {
         setTimeout(function () {
+            // If the game has ended hide the Game Screen and display Game Over Screen.
             updateHighestScore();
             finalScoreElement.innerText = userScore;
             document.getElementById("game-container").classList.add("hide");
             document.getElementById("final-container").classList.remove("hide");
             document.getElementById("final-container").classList.add("flex");
             document.getElementById("outer-container").style.height = "100%";
-        }, 2000)
+        }, 2000);
     }
 }
 
 // Checks the answer from the user clicking on Check Answer if the field is not empty.
-checkAnswerBtn.addEventListener("click", function() {
+checkAnswerBtnElement.addEventListener("click", function() {
     if (document.getElementById("answer").value.length !== 0) {
         checkAnswer();
     } else {
