@@ -131,6 +131,12 @@ The screens consists of:
 
 ## Design
 
+The primary objective is to maintain a simple and consistent structure throughout the game, ensuring that users can easily comprehend the tasks at each stage while maintaining good colors contrast. Each view has a background image that aims to complement the current state of the game without being distracting, whether it's the Start screen, various Game screen themes, or even the 404 page.
+
+### Fonts
+
+The intention is to give the game a techy and playful style through the fonts. The inspiration for the Electrolize font is from https://www.helpmegeek.com/geeky-google-fonts-tech-projects/ and the Chewy font was found through https://fontjoy.com/.
+
 ### Wireframes
 
 <details><summary>Start Screen</summary>
@@ -169,6 +175,7 @@ The screens consists of:
 * [Favicon](https://favicon.io/) to create the favicon files and links.
 * [AutoDraw](https://www.autodraw.com/) to create the favicon logo.
 * [CSS Gradient](https://cssgradient.io) to create the gradients.
+* [Fontjoy](https://fontjoy.com/) to find pairing fonts.
 
 ## Testing
 
