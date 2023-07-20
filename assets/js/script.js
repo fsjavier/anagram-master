@@ -256,7 +256,9 @@ document.getElementById("answer").addEventListener("keydown", function (event) {
     }
 });
 
-// Check final score and set highest score.
+/**
+ * Check final score and set highest score.
+ */
 function updateHighestScore() {
     if(userScore > localStorage.getItem(highestScore)) {
         // If the user's score is higher than the highest score, set the highest score in localStorage.
