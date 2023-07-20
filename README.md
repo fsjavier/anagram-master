@@ -2,7 +2,7 @@
 
 Anagram Master is an online game designed to challenge and entertain word game enthusiasts. In this game, players are tasked with unraveling the mystery hidden within an anagram.
 
-To enhance the gaming experience players can choose their preferred topic and challenge themselves selecting the level of difficulty.
+To enhance the gaming experience players can choose their preferred theme and challenge themselves selecting the level of difficulty.
 
 [View the live site here](https://fsjavier.github.io/anagram-master/)
 
@@ -72,7 +72,7 @@ The screens consists of:
     * To avoid being clicked by mistake, it will only work if the field is not empty.
     * If the user presses the "Enter" button it will have the same effect as clicking on "Check answer".
     * If the answer is correct the answer field will turn green and it will add points to the user's score and move on to the next round.
-    * If the answer is incorrect the answer field will turn red and will move to the next round without adding any points. Not showing the correct answer is a deliberate decission to keep the game challenging it the user wants to play again.
+    * If the answer is incorrect the answer field will turn red and will move to the next round without adding any points. Not showing the correct answer is a deliberate decission to keep the game challenging if the user wants to play again.
 * The round number: The game consists of 8 rounds and the current round is displayed.
 * The current score.
 * If the user runs out of time the answer will be checked.
@@ -124,14 +124,14 @@ The screens consists of:
 
 ### Features left to implement
 
-* Add more anagramas for each theme and more themes.
+* Add more anagramas for each theme and more themes to choose from.
 * The current system to answer anagrams is not ideal for mobile. The keyboard is displayed on the screen and covers important game information. A better solution should be achieved. An option being considered is dragging and dropping letters instead of writing.
 * Add highest score for each theme instead of just one global highest score.
 * Replace the highest score saved on local storage for scores being saved in a database, so that different users can compete with each other.
 
 ## Design
 
-The primary objective is to maintain a simple and consistent structure throughout the game, ensuring that users can easily comprehend the tasks at each stage while maintaining good colors contrast. Each view has a background image that aims to complement the current state of the game without being distracting, whether it's the Start screen, various Game screen themes, or even the 404 page.
+The primary objective is to maintain a simple and consistent structure throughout the game, ensuring that users can easily comprehend the tasks at each stage while maintaining good color contrast. Each view has a background image that aims to complement the current state of the game without being distracting, whether it's the start screen, various game screen themes, or even the 404 page.
 
 ### Fonts
 
@@ -174,7 +174,7 @@ The intention is to give the game a techy and playful style through the fonts. T
 * [TinyPNG](https://tinypng.com) was used to compress the images.
 * [Favicon](https://favicon.io/) to create the favicon files and links.
 * [AutoDraw](https://www.autodraw.com/) to create the favicon logo.
-* [CSS Gradient](https://cssgradient.io) to create the gradients.
+* [CSS Gradient](https://cssgradient.io) to create the button gradients.
 * [Fontjoy](https://fontjoy.com/) to find pairing fonts.
 
 ## Testing
@@ -210,7 +210,7 @@ There are four warnings related to how CSS stlye is kept active only on one butt
 <img src="documentation/tests/test-JSHint-script.js.png">
 </details>
 <details><summary>JSHint test - anagrams.js</summary>
-<img src="documentation/tests/test-JSHint-script.js.png">
+<img src="documentation/tests/test-JSHint-anagrams.js.png">
 </details>
 
 ### Accessibility
@@ -252,9 +252,9 @@ In the final testing of the website there were no accessibility problems.
 | Know how to play. | "How to play" button. | Click on the "How to play" button. | A modal with the information will be displayed, which can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
 | Select a level of difficulty. | Select difficulty. | Click on the "Select difficulty" buttons. | Selecting a button will highlight it to show the user the difficulty chosen.<br><br>Selecting a button deselects the previously selected difficulty button. | Works as expected. |
 | Select a theme to play. | Select theme. | Click on the "Select theme" buttons. | Selecting a button will highlight it to show the user the theme chosen.<br><br>Selecting a button deselects the previously selected theme button. | Works as expected. |
-| Receive help if I can't find the word. | "Hint" button. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. When the anagram is presented click on "Hint". | Clicking on "Hint" shows a modal with information that will help the user solve the anagram.<br><br>The hint can be shown as many times as the user wants, but only first time the hint is displayed points will be subtracted.<br<br>The modal can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
+| Receive help if I can't find the word. | "Hint" button. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. When the anagram is presented click on "Hint". | Clicking on "Hint" shows a modal with information that will help the user solve the anagram.<br><br>The hint can be shown as many times as the user wants, but only first time the hint is displayed points will be subtracted.<br><br>The modal can be dismissed clicking on the "X" or anywhere outside the box. | Works as expected. |
 | Track my score. | Score area. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. The score is displayed in the bottom right side of the game screen.<br><br>3. After finishing all rounds the final score will be shown. | A correct answer will add 3 points to the user's score.<br><br> Asking for a hint will subtract 1 point or 2 points, depending on the difficulty level, from the user's score. | Works as expected. |
-| Be able to end the game / Start over. | "Restart" button.<br><br>"Play again!" button". | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>Option 1: Click on "Restart" button in the top right side of the game screen.<br><br>Option 2: After finishing all rounds the final screen will be shown, click on "Play again!". | Clicking either on "Restart" or "Play again" reloads the page and the user can select their preferences again. | Works as expected. |
+| Be able to end the game / Start over. | "Restart" button.<br><br>"Play again!" button. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>Option 1: Click on "Restart" button in the top right side of the game screen.<br><br>Option 2: After finishing all rounds the final screen will be shown, click on "Play again!". | Clicking either on "Restart" or "Play again" reloads the page and the user can select their preferences again. | Works as expected. |
 | Save my highest score to try to improve it next time. | Highest score saved on local storage. | 1. Select a difficulty level and theme and click "Let's go" to start the game.<br><br>2. Play all rounds.<br><br>3. After finishing all rounds both the final score and the user highest score will be shown. | The first time a user play their score will be saved as their highest score and it will be shown in the final screen.<br><br>Everytime the user beats their previously saved highest score, the current score will be saved as the new highest score. | Works as expected. |
 
 #### Functional testing
@@ -282,18 +282,18 @@ In the final testing of the website there were no accessibility problems.
 | Situation | Expected Outcome | Outcome |
 |-----------|------------------|---------|
 | A user selects "Normal" difficulty and a theme. | The game screen is displayed and:<br><br>1. The background for the selected theme is displayed.<br><br>2. The name of theme is displayed above the anagram.<br><br>3. The round will be set to "1 of 8".<br><br>4. The timer with 45 seconds starts.<br><br>5. The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
-| A user selects "Hard" difficulty and a theme. | The game screen is displayed and:<br><br>1. The background for the selected theme is displayed.<br><br>2. The name of theme is displayed above the anagram.<br><br>3. The round will be set to "1 of 8".<br><br>4. The timer with 30 seconds starts.<br><br>5. The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
+| A user selects "Hard" difficulty and a theme. | The game screen is displayed and:<br><br>1. The background for the selected theme is displayed.<br><br>2. The name of theme is displayed above the anagram.<br><br>3. The round will be set to "1 of 8".<br><br>4. The timer with 20 seconds starts.<br><br>5. The first randomly selected anagram to solve is displayed and the input field is selected. | Works as expected. |
 | A user hovers over any of the buttons. | The button is highlighted. | Works as expected. |
 | A user clicks on "Check Answer" or presses "Enter" with an empty input field. | Nothing happens. | Works as expected. |
-| A user clicks on "Check Answer" or presses "Enter" after writing a wrong answer in the input field. | The input field turns red, no points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
-| A user clicks on "Check Answer" or presses "Enter" after writing the correct answer in the input field. | The input field turns green, 3 points are added to the score and after 2 seconds moves to the next round. | Works as expected. |
+| A user clicks on "Check Answer" or presses "Enter" after writing a wrong answer in the input field. | The input field turns red, no points are added to the score and after 2 seconds the game moves to the next round. | Works as expected. |
+| A user clicks on "Check Answer" or presses "Enter" after writing the correct answer in the input field. | The input field turns green, 3 points are added to the score and after 2 seconds the game moves to the next round. | Works as expected. |
 | A user enters the last 5 seconds of the round. | The countdown timer turns red during the last 5 seconds. When the user moves to the next round the timer is white again. | Works as expected. |
 | The time for the round is over. | The input field is checked and the same procedure for incorrect/correct answer described above applies. | Works as expected. |
 | A user clicks on "Hint" for the first time in a round. | The modal with helpful information to solve the anagram is displayed and 1 or 2 points will be subtracted from the user's score, depending the current difficulty level. | Works as expected. |
 | A user clicks on "Hint" again after the first time in a round. | The modal with helpful information to solve the anagram is displayed and no points are subtracted. | Works as expected. |
-| Either the user checks an answer or runs out of time in a round. | The next round loads and:<br><br>1. A new anagram is displayed<br><br>2. The timer starts again with either 45 seconds or 30, depending on the difficulty level.<br><br>3. The text with "Round X of 8" is updated with the current round". |
+| Either the user checks an answer or runs out of time in a round. | The next round loads and:<br><br>1. A new anagram is displayed<br><br>2. The timer starts again with either 45 seconds or 20, depending on the difficulty level.<br><br>3. The text with "Round X of 8" is updated with the current round". | Works as expected. |
 | A user clicks on "Restart" | The page is reloaded, which resets the game information and the user returns to the the "Start screen". | Works as expected. |
-| A user completes the 8 rounds. | The "Game screen" will be hidden and the "Final screen" is displayed.
+| A user completes the 8 rounds. | The "Game screen" will be hidden and the "Final screen" is displayed. | Works as expected. |
 
 
 * Game Over screen
@@ -303,7 +303,7 @@ In the final testing of the website there were no accessibility problems.
 | A user finish the game for the first time. | The score and the highest score will be displayed. The highest score will be equal to the current score. | Works as expected. |
 | A user finish the game after the first time with a lower score than their current highest score. | The current score and the previously achieved highest score will be displayed. | Works as expected. |
 | A user finish the game after the first time with a higher score than their current highest score. | The current score is displayed and the the highest score is updated with the current score. | Works as expected. |
-| A user misses at least one correct anwer during the game. | The message "Game Over" is displayed. | Works as expected. |
+| A user misses at least one correct answer during the game. | The message "Game Over" is displayed. | Works as expected. |
 | A user answers correctly all rounds. | The message "You are a Pro!" is displayed. | Works as expected. |
 | A user clicks on "Play Again!". | The page is reloaded, what resets the game information (except the highest score) and the user returns to the the "Start screen". | Works as expected. |
 
@@ -329,11 +329,11 @@ The website has been tested in the following browsers on desktop, without findin
 |-----|----------|
 | On mobile horizontal orientation the top and bottom content were cut off on Start screen. | Replace height property with min-height. |
 | On mobile horizontal orientation the game container was too small and there was not enough space for the text. | Increase game container size. |
-| The buttons with links resulted in style not being applied properly because it was not valid HTML5  | Remove the button element and apply the button class to a different element. |
+| The buttons with links resulted in style not being applied properly because it was not valid HTML5.  | Remove the button element and apply the btn class to a different element. |
 | After clicking on the "Hint" button the focus from the input field was gone. | Add focus again to the function that closes the modal. |
 | Clicking repeatedly on "Hint" in a round would subtract points each time from the score. | Add a boolean variable that tracks if the user has already clicked on "Hint" in the current round. |
 | After the user answered the countdown timer continues running for a couple of seconds. | Move clearInterval() function from setNextQuestion() to checkAnswer(). |
-| After the last round the game moved too fast to the final screen, without having time even to see if the answer was correct or incorrect. | Add the same setTimeOut() function that is place for the rounds where the game continues after answer. |
+| After the last round the game moved too fast to the final screen, without having time even to see if the answer was correct or incorrect. | Add the same setTimeOut() function that is in place for the rounds where the game continues after answer. |
 
 ## Deployment
 
@@ -362,7 +362,8 @@ The project will now of been cloned on your local machine for use.
 
 ### Content
 
-Inspiration to create the anagrams from https://www.wordplays.com/anagrammer
+Inspiration to create the anagrams from https://www.wordplays.com/anagrammer.
+
 Information for the hints from Wikipedia and ChatGPT.
 
 ### Code
